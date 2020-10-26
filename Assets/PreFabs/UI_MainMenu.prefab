@@ -351,7 +351,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1549089247338784832}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d7db9ef6fcc3dd468b8281a247247ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 70a07025e12ece1499a7f6c517044c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   networkManager: {fileID: 0}
@@ -1359,13 +1359,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1549089248130290933}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feb1a99ff9a5fd04dab56f464799360e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f75ef96791981646bd6ec779d06c18a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   networkManager: {fileID: 0}
-  landingPagePanel: {fileID: 1549089247760048144}
-  ipAddressInputField: {fileID: 1549089247655062214}
-  joinButton: {fileID: 1549089248168630607}
+  landingPagePanel: {fileID: 0}
+  ipAddressInputField: {fileID: 0}
+  joinButton: {fileID: 0}
 --- !u!1 &1549089248168630605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1542,11 +1542,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1549089248296151922}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 000c957e94316d4449834ea039c64e0d, type: 3}
+  m_Script: {fileID: 11500000, guid: 95dd71b6c0383204d850ac478768ebb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameInputField: {fileID: 1549089247533752450}
-  continueButton: {fileID: 1549089249281154791}
+  nameInputField: {fileID: 0}
+  continueButton: {fileID: 0}
 --- !u!1 &1549089248343364310
 GameObject:
   m_ObjectHideFlags: 0

@@ -351,7 +351,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1138880160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 615e6c6589cf9e54cad646b5a11e0529, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a4caf125e15a8744889d59adfad424c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 1
@@ -367,17 +367,17 @@ MonoBehaviour:
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
   authenticator: {fileID: 0}
-  playerPrefab: {fileID: 0}
+  playerPrefab: {fileID: 8896768850616423229}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
   spawnPrefabs: []
-  showRoomGUI: 1
-  minPlayers: 1
-  roomPlayerPrefab: {fileID: 0}
-  RoomScene: 
-  GameplayScene: 
-  _allPlayersReady: 0
-  roomSlots: []
+  minPlayers: 2
+  menuScene: Assets/Scenes/Lobby.unity
+  roomPlayerPrefab: {fileID: 5403724562265303340, guid: 9f8e10965d8ba044ebd7743732764fd9,
+    type: 3}
+  gamePlayerPrefab: {fileID: -2212001093032426636, guid: 9728fbd937e491f419396f678e787e72,
+    type: 3}
+  playerSpawnSystem: {fileID: 0}
 --- !u!114 &1138880162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -683,8 +683,92 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1549089248130290935, guid: 8c838ec1ee3582d49a1f8734c0cf4ee9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8c838ec1ee3582d49a1f8734c0cf4ee9, type: 3}
+--- !u!1 &1850817926 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1549089248130290933, guid: 8c838ec1ee3582d49a1f8734c0cf4ee9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1850817925}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1850817927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850817926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7424c1070fad4ba2a7a96b02fbeb4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnClientConnected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnClientDataReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  OnClientError:
+    m_PersistentCalls:
+      m_Calls: []
+  OnClientDisconnected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnServerConnected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnServerDataReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  OnServerError:
+    m_PersistentCalls:
+      m_Calls: []
+  OnServerDisconnected:
+    m_PersistentCalls:
+      m_Calls: []
+  port: 7777
+  NoDelay: 1
+  serverMaxMessageSize: 16384
+  serverMaxReceivesPerTick: 10000
+  clientMaxMessageSize: 16384
+  clientMaxReceivesPerTick: 1000
+--- !u!114 &1850817928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850817926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4caf125e15a8744889d59adfad424c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 1
+  runInBackground: 1
+  autoStartServerBuild: 1
+  showDebugMessages: 0
+  serverTickRate: 30
+  offlineScene: 
+  onlineScene: 
+  transport: {fileID: 1850817927}
+  networkAddress: localhost
+  maxConnections: 4
+  disconnectInactiveConnections: 0
+  disconnectInactiveTimeout: 60
+  authenticator: {fileID: 0}
+  playerPrefab: {fileID: 1741732765298726689, guid: 21421b4af5a68ac4fa03c55ba3fecf26,
+    type: 3}
+  autoCreatePlayer: 1
+  playerSpawnMethod: 0
+  spawnPrefabs: []
+  minPlayers: 2
+  menuScene: Assets/Scenes/Lobby.unity
+  roomPlayerPrefab: {fileID: 0}
+  gamePlayerPrefab: {fileID: 0}
+  playerSpawnSystem: {fileID: 0}
 --- !u!1001 &8896768850616423228
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -759,3 +843,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21421b4af5a68ac4fa03c55ba3fecf26, type: 3}
+--- !u!1 &8896768850616423229 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1741732765298726689, guid: 21421b4af5a68ac4fa03c55ba3fecf26,
+    type: 3}
+  m_PrefabInstance: {fileID: 8896768850616423228}
+  m_PrefabAsset: {fileID: 0}
