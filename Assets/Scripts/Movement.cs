@@ -8,7 +8,7 @@ public class Movement : NetworkBehaviour
     //value Variables
     public float moveSpeed, rotateSpeed;
     public float walkSpeed, runSpeed;
-
+    public float gravity, jumpForce;
     //Struct - Contains Multiple Variables (eg...3 floats)
     private Vector3 _moveDir;
     //Reference Variable
@@ -60,12 +60,24 @@ public class Movement : NetworkBehaviour
 
             }
             else
-            {
+        { 
                 moveSpeed = walkSpeed;
 
             }
-        
-        _moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) * moveSpeed;
+
+        if (Input.GetKeyDown("j") && _charC.isGrounded == true)
+        {
+            gravity = -jumpForce;
+        }
+        if (_charC.isGrounded == false)
+        {
+            gravity += Time.deltaTime * Time.deltaTime * Time.deltaTime;
+        }
+        else
+        {
+            gravity = 0;
+        }
+        _moveDir = new Vector3(Input.GetAxis("Horizontal"), -gravity, Input.GetAxis("Vertical")) * moveSpeed;
         
         Vector3 newDirection = Vector3.RotateTowards(transform.forward, _moveDir, rotateSpeed, 0.0f);
         self.transform.rotation = Quaternion.LookRotation(newDirection);
