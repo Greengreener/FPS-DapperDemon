@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using Mirror;
 
-
-public class Movement : MonoBehaviour
+public class Movement : NetworkBehaviour
 {
     [Header("Speed Vars")]
     //value Variables
@@ -29,8 +29,11 @@ public class Movement : MonoBehaviour
     private void Update()
     {
 
-
-        Move();
+        if (hasAuthority)
+        {
+            Move();
+        }
+       
 
 
 
