@@ -9,8 +9,8 @@ using UnityEngine.UI;
     {
         [Header("UI")]
         [SerializeField] private GameObject lobbyUI = null;
-        [SerializeField] private Text[] playerNameTexts = new Text[4];
-        [SerializeField] private Text[] playerReadyTexts = new Text[4];
+        [SerializeField] private TMP[] playerNameTexts = new TMP[4];
+        [SerializeField] private TMP[] playerReadyTexts = new TMP[4];
         [SerializeField] private Button startGameButton = null;
 
 
