@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -329,8 +329,8 @@ MonoBehaviour:
   autoStartServerBuild: 1
   showDebugMessages: 0
   serverTickRate: 30
-  offlineScene: 
-  onlineScene: 
+  offlineScene: Assets/Scenes/Lobby.unity
+  onlineScene: Assets/Scenes/SampleScene.unity
   transport: {fileID: 1138880162}
   networkAddress: localhost
   maxConnections: 4
@@ -344,7 +344,7 @@ MonoBehaviour:
   spawnPrefabs: []
   minPlayers: 2
   menuScene: Assets/Scenes/Lobby.unity
-  roomPlayerPrefab: {fileID: 5403724562265303340, guid: 9f8e10965d8ba044ebd7743732764fd9,
+  roomPlayerPrefab: {fileID: 2557502924886572251, guid: c2de805c9b00cdc49a22a9b4c39137b0,
     type: 3}
   gamePlayerPrefab: {fileID: -2212001093032426636, guid: 9728fbd937e491f419396f678e787e72,
     type: 3}
