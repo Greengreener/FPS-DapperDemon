@@ -7,8 +7,8 @@ using UnityEngine;
 
 public class PlayerSpawnSystem : NetworkBehaviour
 {
-    [SerializeField] private GameObject playerPrefab = null;
-
+    [SerializeField] private GameObject[] playerPrefab = null;
+    private int[] Team;
     private static List<Transform> spawnPoints = new List<Transform>();
 
     private int nextIndex = 0;
@@ -43,11 +43,26 @@ public class PlayerSpawnSystem : NetworkBehaviour
             Debug.LogError("Missing spawn point for player" + nextIndex);
             return;
         }
-
-        GameObject playerInstance = Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
-        NetworkServer.Spawn(playerInstance, conn);
-
+        
+            if (Team[0] < Team[1])
+            {
+                GameObject playerInstance = Instantiate(playerPrefab[0], spawnPoint.position, spawnPoint.rotation);
+                NetworkServer.Spawn(playerInstance, conn);
+                Team[0] += 1;
+            }
+            else
+            {
+                GameObject playerInstance = Instantiate(playerPrefab[1], spawnPoint.position, spawnPoint.rotation);
+                NetworkServer.Spawn(playerInstance, conn);
+                Team[1] += 1;
+            }
+        
         nextIndex++;
+
+
+
+
+
     }
 
 }
