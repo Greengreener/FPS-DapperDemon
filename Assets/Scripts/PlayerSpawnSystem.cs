@@ -36,26 +36,49 @@ public class PlayerSpawnSystem : NetworkBehaviour
     [Server]
     public void SpawnPlayer(NetworkConnection conn)
     {
-        Transform spawnPoint = spawnPoints.ElementAtOrDefault(nextIndex);
 
-        if(spawnPoint == null)
+
+        if (Team[0] < Team[1])
         {
-            Debug.LogError("Missing spawn point for player" + nextIndex);
-            return;
-        }
-        
-            if (Team[0] < Team[1])
+            Transform spawnPoint = spawnPoints.ElementAtOrDefault(nextIndex);
+
+            if (spawnPoint == null)
             {
+                Debug.LogError("Missing spawn point for player" + nextIndex);
+                return;
+            }
+            if (spawnPoint.tag == "TeamA")
+            {
+
+
+
                 GameObject playerInstance = Instantiate(playerPrefab[0], spawnPoint.position, spawnPoint.rotation);
                 NetworkServer.Spawn(playerInstance, conn);
                 Team[0] += 1;
             }
             else
             {
+
+            }
+        }
+        else
+        {
+            Transform spawnPoint = spawnPoints.ElementAtOrDefault(nextIndex);
+
+            if (spawnPoint == null)
+            {
+                Debug.LogError("Missing spawn point for player" + nextIndex);
+                return;
+            }
+            if (spawnPoint.tag != "TeamA")
+            {
+
+
                 GameObject playerInstance = Instantiate(playerPrefab[1], spawnPoint.position, spawnPoint.rotation);
                 NetworkServer.Spawn(playerInstance, conn);
                 Team[1] += 1;
             }
+        }
         
         nextIndex++;
 

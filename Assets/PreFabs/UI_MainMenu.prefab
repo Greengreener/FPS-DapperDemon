@@ -1322,7 +1322,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1549089248130290932}
-  - component: {fileID: 1549089248130290935}
+  - component: {fileID: 1850817927}
+  - component: {fileID: 9037769181962646341}
   m_Layer: 5
   m_Name: Panel_IP
   m_TagString: Untagged
@@ -1350,7 +1351,49 @@ RectTransform:
   m_AnchoredPosition: {x: 25, y: -298.5}
   m_SizeDelta: {x: 1158, y: 651}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1549089248130290935
+--- !u!114 &1850817927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549089248130290933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7424c1070fad4ba2a7a96b02fbeb4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnClientConnected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnClientDataReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  OnClientError:
+    m_PersistentCalls:
+      m_Calls: []
+  OnClientDisconnected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnServerConnected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnServerDataReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  OnServerError:
+    m_PersistentCalls:
+      m_Calls: []
+  OnServerDisconnected:
+    m_PersistentCalls:
+      m_Calls: []
+  port: 7777
+  NoDelay: 1
+  serverMaxMessageSize: 16384
+  serverMaxReceivesPerTick: 10000
+  clientMaxMessageSize: 16384
+  clientMaxReceivesPerTick: 1000
+--- !u!114 &9037769181962646341
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1363,9 +1406,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   networkManager: {fileID: 0}
-  landingPagePanel: {fileID: 0}
-  ipAddressInputField: {fileID: 0}
-  joinButton: {fileID: 0}
+  landingPagePanel: {fileID: 1549089247760048144}
+  ipAddressInputField: {fileID: 1549089247655062214}
+  joinButton: {fileID: 1549089248168630607}
 --- !u!1 &1549089248168630605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,7 +1527,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1549089248130290935}
+      - m_Target: {fileID: 9037769181962646341}
         m_MethodName: JoinLobby
         m_Mode: 1
         m_Arguments:
@@ -1545,8 +1588,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95dd71b6c0383204d850ac478768ebb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameInputField: {fileID: 0}
-  continueButton: {fileID: 0}
+  nameInputField: {fileID: 1549089247533752450}
+  continueButton: {fileID: 1549089249281154791}
 --- !u!1 &1549089248343364310
 GameObject:
   m_ObjectHideFlags: 0

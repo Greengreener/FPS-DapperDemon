@@ -14,12 +14,13 @@ public class NetworkManagerLobby : NetworkManager
     [Scene][SerializeField] private string menuScene = string.Empty;
 
     [Header("Room")]
-    [SerializeField] private NetworkRoomPlayer roomPlayerPrefab = null;
+    [SerializeField] private NetworkRoomPlayer[] roomPlayerPrefab = null;
 
     [Header("Game")]
     [SerializeField] private NetworkGamePlayer gamePlayerPrefab = null;
-    [SerializeField] private GameObject playerSpawnSystem = null;
+    [SerializeField] private GameObject[] playerSpawnSystem = null;
 
+    private bool TeamA;
     public event Action onClientConnected;
     public event Action onClientDisconnected;
     public static event Action<NetworkConnection> onServerReadied;
@@ -78,11 +79,12 @@ public class NetworkManagerLobby : NetworkManager
         {
             bool isLeader = RoomPlayers.Count == 0;
 
-            NetworkRoomPlayer roomPlayerInstance = Instantiate(roomPlayerPrefab);
-
-            roomPlayerInstance.IsLeader = isLeader;
-
-            NetworkServer.AddPlayerForConnection(conn, roomPlayerInstance.gameObject);
+            NetworkRoomPlayer roomPlayerInstance0 = Instantiate(roomPlayerPrefab[0]);
+            NetworkRoomPlayer roomPlayerInstance1 = Instantiate(roomPlayerPrefab[1]);
+            roomPlayerInstance0.IsLeader = isLeader;
+            roomPlayerInstance1.IsLeader = isLeader;
+            NetworkServer.AddPlayerForConnection(conn, roomPlayerInstance0.gameObject);
+            NetworkServer.AddPlayerForConnection(conn, roomPlayerInstance1.gameObject);
         }
     }
 
@@ -141,7 +143,8 @@ public class NetworkManagerLobby : NetworkManager
     }
 
     public void StartGame()
-    {
+    {   
+
         if(SceneManager.GetActiveScene().path == menuScene)
         {
             if(!IsReadyToStart())
@@ -177,10 +180,19 @@ public class NetworkManagerLobby : NetworkManager
 
     public override void OnServerSceneChanged(string sceneName)
     {
-        if (sceneName.StartsWith("Game_Map"))
+        if (sceneName.StartsWith("MitchellTest"))
         {
-            GameObject playerSpawnSystemInstance = Instantiate(playerSpawnSystem);
-            NetworkServer.Spawn(playerSpawnSystemInstance);
+            GameObject playerSpawnSystemInstanceA = Instantiate(playerSpawnSystem[0]);
+            GameObject playerSpawnSystemInstanceB = Instantiate(playerSpawnSystem[1]);
+            if (TeamA == true)
+            {
+                NetworkServer.Spawn(playerSpawnSystemInstanceA);
+            }
+            else
+            {
+                NetworkServer.Spawn(playerSpawnSystemInstanceB);
+            }
+            
         }
     }
 }

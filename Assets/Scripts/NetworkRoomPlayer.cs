@@ -13,7 +13,7 @@ using UnityEngine.UI;
         [SerializeField] private Text[] playerNameTexts = new Text[4];
         [SerializeField] private Text[] playerReadyTexts = new Text[4];
         [SerializeField] private Button startGameButton = null;
-
+        private bool TeamID;
 
         [SyncVar(hook = nameof(HandleDisplayNameChanged))]
         public string DisplayName = "Loading...";

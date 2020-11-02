@@ -225,8 +225,8 @@ MonoBehaviour:
   rotateSpeed: 1
   walkSpeed: 5
   runSpeed: 10
-  gravity: 0
-  jumpForce: 0
+  gravity: 1
+  jumpForce: 4
   _charC: {fileID: 5489284814215345217}
   self: {fileID: 1741732765298726689}
 --- !u!143 &5489284814215345217
