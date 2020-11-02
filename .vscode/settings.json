@@ -1,6 +1,6 @@
 ﻿{
     //*Font
-    "editor.fontSize": 13,
+    "editor.fontSize": 14,
     "editor.fontFamily": "'Fira Code', 'Consolas', 'Courier New', monospace",
     "editor.fontLigatures": true,
     //*Format
