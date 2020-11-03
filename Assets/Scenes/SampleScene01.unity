@@ -443,6 +443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guns: []
+  currentGunId: 0
 --- !u!114 &285921966
 MonoBehaviour:
   m_ObjectHideFlags: 0

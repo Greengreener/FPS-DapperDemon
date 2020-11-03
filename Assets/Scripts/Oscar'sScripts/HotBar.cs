@@ -21,15 +21,16 @@ public class HotBar : MonoBehaviour
     }
     void Update()
     {
-
         if (Input.mouseScrollDelta.y == 1)
         {
-            print(Input.mouseScrollDelta.y);
             currentGunId++;
-
-            if (currentGunId > guns.Count) currentGunId = 0;
-            if (currentGunId < 0) currentGunId = guns.Count;
-
+            if (currentGunId >= guns.Count) currentGunId = 0;
+            WeaponChange(currentGunId);
+        }
+        if (Input.mouseScrollDelta.y == -1)
+        {
+            currentGunId--;
+            if (currentGunId < 0) currentGunId = guns.Count - 1;
             WeaponChange(currentGunId);
         }
         if (Input.GetKeyDown(KeyCode.Alpha1))

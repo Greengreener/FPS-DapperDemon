@@ -10,7 +10,7 @@ public class Gun : MonoBehaviour
     Inventory inv;
     public int GunCode;
     [SerializeField]
-    string GunType;
+    string GunType = "";
     public float damage;
     float fireRate;
     [SerializeField]
