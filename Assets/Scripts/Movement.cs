@@ -12,11 +12,13 @@ public class Movement : NetworkBehaviour
     //Struct - Contains Multiple Variables (eg...3 floats)
     private Vector3 _moveDir;
     //Reference Variable
+    [SerializeField]
+    private bool forceMovement = false;
 
     public CharacterController _charC;
     public GameObject self;
 
-
+    
     private void Start()
     {
         _charC = GetComponent<CharacterController>();
@@ -29,7 +31,7 @@ public class Movement : NetworkBehaviour
     private void Update()
     {
 
-        if (hasAuthority)
+        if (hasAuthority || forceMovement)
         {
             Move();
         }
@@ -65,19 +67,35 @@ public class Movement : NetworkBehaviour
 
             }
 
+       
+       
         if (Input.GetKeyDown("j") && _charC.isGrounded == true)
         {
             gravity = -jumpForce;
         }
-        if (_charC.isGrounded == false)
+       
+        else 
         {
-            gravity += Time.deltaTime * Time.deltaTime * Time.deltaTime;
+            if (_charC.isGrounded == false)
+            {
+                gravity += Time.deltaTime * Time.deltaTime * 9.8f;
+            }
+            else
+            {
+                if (gravity >= 1)
+                {
+                    Debug.Log("Player is hurt");
+                    gravity = 0.7f;
+                }
+                else
+                {
+                    gravity = 0.7f;
+                }
+               
+            }
+            
         }
-        else
-        {
-            gravity = 0;
-        }
-        _moveDir = new Vector3(Input.GetAxis("Horizontal"), -gravity, Input.GetAxis("Vertical")) * moveSpeed;
+        _moveDir = new Vector3(Input.GetAxis("Horizontal"), -gravity * 2f, Input.GetAxis("Vertical")) * moveSpeed;
         
         Vector3 newDirection = Vector3.RotateTowards(transform.forward, _moveDir, rotateSpeed, 0.0f);
         self.transform.rotation = Quaternion.LookRotation(newDirection);
