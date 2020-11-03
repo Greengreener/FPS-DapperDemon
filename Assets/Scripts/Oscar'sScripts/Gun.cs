@@ -6,25 +6,27 @@ public class Gun : MonoBehaviour
 {
     [SerializeField]
     Health player;
-    Inventory inventory;
+    [SerializeField]
+    Inventory inv;
     public int GunCode;
     [SerializeField]
     string GunType;
     public float damage;
     float fireRate;
+    [SerializeField]
     int ammoClipCurrent;
     int ammoClipCapacity;
     float gunRange;
     Camera playerCamera;
-    void Start()
+    void Awake()
     {
         player = gameObject.GetComponentInParent<Health>();
-        inventory = gameObject.GetComponent<Inventory>();
+        inv = gameObject.GetComponentInParent<Inventory>();
         playerCamera = gameObject.GetComponentInParent<Camera>();
         #region GunTypeSetting
         switch (GunCode)
         {
-            case 0: //HandGun
+            case 1: //HandGun
                 GunType = "Handgun";
                 damage = 2.5f;
                 fireRate = 1;
@@ -32,7 +34,7 @@ public class Gun : MonoBehaviour
                 ammoClipCapacity = 8;
                 ammoClipCurrent = ammoClipCapacity;
                 break;
-            case 1: //Rifle
+            case 2: //Rifle
                 GunType = "Rifle";
                 damage = 10;
                 fireRate = 2.5f;
@@ -51,36 +53,32 @@ public class Gun : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Reload(ammoClipCurrent);
+            Reload();
         }
     }
-
     void Shoot()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, gunRange))
+        if (ammoClipCurrent > 0)
         {
-            #region Debugging
-            // Debug.DrawLine(playerCamera.transform.position, playerCamera.transform.forward * gunRange, Color.green, 100f);
-            // print("Bang");
-            #endregion
-
-            Health target = hit.transform.GetComponent<Health>();
-            if (target != null && target.teamTag != player.teamTag)
+            RaycastHit hit;
+            if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, gunRange))
             {
-                //print("Target found ");
-                target.Damage(damage);
+                Health target = hit.transform.GetComponent<Health>();
+                if (target != null && target.teamTag != player.teamTag)
+                {
+                    //print("Target found ");
+                    target.Damage(damage);
+                }
             }
-
+            ammoClipCurrent--;
         }
-
+        else { return; }
     }
-    int Reload(int _ammoClipCurrent)
+    void Reload()
     {
-        int ammoInClip = 0;
-
-
-
-        return ammoInClip;
+        //inv.ammo -= ammoClipCapacity;
+        //ammoClipCurrent = ammoClipCapacity;
+        var spaceInClip = ammoClipCapacity - ammoClipCurrent;
+        ammoClipCurrent += inv.ReloadCurrentGun(GunCode, spaceInClip);
     }
 }
