@@ -10,11 +10,11 @@ public class Gun : MonoBehaviour
     Inventory inv;
     public int GunCode;
     [SerializeField]
-    string GunType = "";
-    public float damage;
+    public string GunType = "";
+    public float Damage;
     float fireRate;
     [SerializeField]
-    int ammoClipCurrent;
+    public int ammoClipCurrent;
     int ammoClipCapacity;
     float gunRange;
     Camera playerCamera;
@@ -28,7 +28,7 @@ public class Gun : MonoBehaviour
         {
             case 1: //HandGun
                 GunType = "Handgun";
-                damage = 2.5f;
+                Damage = 2.5f;
                 fireRate = 1;
                 gunRange = 10;
                 ammoClipCapacity = 8;
@@ -36,7 +36,7 @@ public class Gun : MonoBehaviour
                 break;
             case 2: //Rifle
                 GunType = "Rifle";
-                damage = 10;
+                Damage = 10;
                 fireRate = 2.5f;
                 gunRange = 20;
                 ammoClipCapacity = 30;
@@ -67,7 +67,7 @@ public class Gun : MonoBehaviour
                 if (target != null && target.teamTag != player.teamTag)
                 {
                     //print("Target found ");
-                    target.Damage(damage);
+                    target.Damage(Damage);
                 }
             }
             ammoClipCurrent--;

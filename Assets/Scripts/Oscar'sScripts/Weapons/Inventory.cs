@@ -5,10 +5,10 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     [SerializeField]
-    int handgunAmmoCurrent;
+    public int handgunAmmoCurrent;
     int handgunAmmoCapacity = 30;
     [SerializeField]
-    int rifleAmmoCurrent;
+    public int rifleAmmoCurrent;
     int rifleAmmoCapacity = 150;
     private void Awake()
     {

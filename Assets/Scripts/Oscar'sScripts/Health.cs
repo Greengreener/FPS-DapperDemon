@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    public float HealthCurrent { get; set; }
     [SerializeField]
     float healthCurrent;
     public float healthTotal;
     public string teamTag;
     void Start()
     {
-        if (healthTotal == null)
-        {
-            Debug.LogError("Health total = null");
-        }
         healthCurrent = healthTotal;
+        HealthCurrent = healthCurrent;
     }
     public void Heal(float _intakeHeal)
     {
         healthCurrent += _intakeHeal;
+        UpdatePublicHealth();
         if (healthCurrent >= healthTotal)
         {
             healthCurrent = healthTotal;
@@ -27,6 +26,7 @@ public class Health : MonoBehaviour
     public void Damage(float _intakeDamage)
     {
         healthCurrent -= _intakeDamage;
+        UpdatePublicHealth();
         if (healthCurrent <= 0)
         {
             Death();
@@ -37,5 +37,9 @@ public class Health : MonoBehaviour
         #region Temp
         this.gameObject.SetActive(false);
         #endregion
+    }
+    void UpdatePublicHealth()
+    {
+        HealthCurrent = healthCurrent;
     }
 }
