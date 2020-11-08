@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    #region Gun ammo
     [SerializeField]
     public int handgunAmmoCurrent;
     int handgunAmmoCapacity = 30;
     [SerializeField]
     public int rifleAmmoCurrent;
     int rifleAmmoCapacity = 150;
+    #endregion
+    [SerializeField]
+    public int grenadeCurrent;
+    int grenadeCapacity = 3;
     private void Awake()
     {
         handgunAmmoCurrent = handgunAmmoCapacity;
         rifleAmmoCurrent = rifleAmmoCapacity;
+        grenadeCurrent = grenadeCapacity;
     }
 
     public int ReloadCurrentGun(int _GunCode, int _spaceInClip)
