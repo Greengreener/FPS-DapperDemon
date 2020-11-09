@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -228,6 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f2d69b9d9b34b04da45e48931993988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TeamID: 1
 --- !u!1 &68042790
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,6 +400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f2d69b9d9b34b04da45e48931993988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TeamID: 0
 --- !u!1 &137641171
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,6 +508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f2d69b9d9b34b04da45e48931993988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TeamID: 1
 --- !u!1 &322396480
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,6 +616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f2d69b9d9b34b04da45e48931993988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TeamID: 1
 --- !u!1 &380931529
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,6 +817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f2d69b9d9b34b04da45e48931993988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TeamID: 0
 --- !u!1 &625095751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,7 +1020,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.13e-43, y: -0.2926166, z: 7.12e-43, w: 4.1272477e+30}
+  m_BoundingSphereOverride: {x: 0, y: 0.00012207031, z: 2.3509887e-38, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1411,6 +1416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f2d69b9d9b34b04da45e48931993988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TeamID: 1
 --- !u!1 &1209138132
 GameObject:
   m_ObjectHideFlags: 0
@@ -2321,6 +2327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f2d69b9d9b34b04da45e48931993988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TeamID: 1
 --- !u!1 &1358624693
 GameObject:
   m_ObjectHideFlags: 0
@@ -2428,6 +2435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f2d69b9d9b34b04da45e48931993988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TeamID: 0
 --- !u!1 &1378670229
 GameObject:
   m_ObjectHideFlags: 0
@@ -2535,6 +2543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f2d69b9d9b34b04da45e48931993988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TeamID: 0
 --- !u!1 &1397588211
 GameObject:
   m_ObjectHideFlags: 0
@@ -2710,6 +2719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f2d69b9d9b34b04da45e48931993988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TeamID: 0
 --- !u!1 &1615033815
 GameObject:
   m_ObjectHideFlags: 0
@@ -2817,6 +2827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f2d69b9d9b34b04da45e48931993988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TeamID: 0
 --- !u!1 &1896800409
 GameObject:
   m_ObjectHideFlags: 0
@@ -2924,6 +2935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f2d69b9d9b34b04da45e48931993988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TeamID: 1
 --- !u!1 &1939564982
 GameObject:
   m_ObjectHideFlags: 0
@@ -3031,6 +3043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f2d69b9d9b34b04da45e48931993988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TeamID: 0
 --- !u!1 &2029988218 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 435477615, guid: 21421b4af5a68ac4fa03c55ba3fecf26,

@@ -10,11 +10,11 @@ using UnityEngine.UI;
 
 public class NetworkManagerLobby : NetworkManager
 {
-    [SerializeField] private int minPlayers = 2;
+    [SerializeField] private int minPlayers = 4;
     [Scene][SerializeField] private string menuScene = string.Empty;
 
     [Header("Room")]
-    [SerializeField] private NetworkRoomPlayer[] roomPlayerPrefab = null;
+    [SerializeField] private NetworkRoomPlayer roomPlayerPrefab = null;
 
     [Header("Game")]
     [SerializeField] private NetworkGamePlayer gamePlayerPrefab = null;
@@ -79,12 +79,12 @@ public class NetworkManagerLobby : NetworkManager
         {
             bool isLeader = RoomPlayers.Count == 0;
 
-            NetworkRoomPlayer roomPlayerInstance0 = Instantiate(roomPlayerPrefab[0]);
-            NetworkRoomPlayer roomPlayerInstance1 = Instantiate(roomPlayerPrefab[1]);
+            NetworkRoomPlayer roomPlayerInstance0 = Instantiate(roomPlayerPrefab);
+            
             roomPlayerInstance0.IsLeader = isLeader;
-            roomPlayerInstance1.IsLeader = isLeader;
+          
             NetworkServer.AddPlayerForConnection(conn, roomPlayerInstance0.gameObject);
-            NetworkServer.AddPlayerForConnection(conn, roomPlayerInstance1.gameObject);
+           
         }
     }
 

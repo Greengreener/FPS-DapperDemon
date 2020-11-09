@@ -18,13 +18,13 @@ public class Movement : NetworkBehaviour
     public CharacterController _charC;
     public GameObject self;
 
-    Health playerHealth;
-    float fallDamage = ;
+    public Health playerHealth;
+    public float fallDamage = 1;
 
     private void Start()
     {
         _charC = GetComponent<CharacterController>();
-        playerHealth = GetCompont<Health>();
+        playerHealth = gameObject.GetComponent<Health>();
     }
 
     private void Update()

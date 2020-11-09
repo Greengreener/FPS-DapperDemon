@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerSpawnPoint : MonoBehaviour
 {
+    public bool TeamID;
     private void Awake()
     {
         PlayerSpawnSystem.AddSpawnPoint(transform);
