@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using Mirror;
+using UnityEngine;
 using UnityEngine.UI;
-using Mirror;
 
 public class Movement : NetworkBehaviour
 {
@@ -18,14 +18,13 @@ public class Movement : NetworkBehaviour
     public CharacterController _charC;
     public GameObject self;
 
-    
+    Health playerHealth;
+    float fallDamage = ;
+
     private void Start()
     {
         _charC = GetComponent<CharacterController>();
-
-
-
-
+        playerHealth = GetCompont<Health>();
     }
 
     private void Update()
@@ -35,46 +34,35 @@ public class Movement : NetworkBehaviour
         {
             Move();
         }
-       
-
-
 
     }
 
     private void Move()
     {
-           //set speed
+        //set speed
 
+        if (Input.GetKeyDown("e"))
+        {
+            moveSpeed = runSpeed;
 
+        }
+        else if (Input.GetKeyDown("q"))
+        {
+            moveSpeed = 0;
 
+        }
+        else
+        {
+            moveSpeed = walkSpeed;
 
+        }
 
-
-
-            if (Input.GetKeyDown("e"))
-            {
-                moveSpeed = runSpeed;
-
-            }
-            else if (Input.GetKeyDown("q"))
-            {
-                moveSpeed = 0;
-
-            }
-            else
-        { 
-                moveSpeed = walkSpeed;
-
-            }
-
-       
-       
         if (Input.GetKeyDown("j") && _charC.isGrounded == true)
         {
             gravity = -jumpForce;
         }
-       
-        else 
+
+        else
         {
             if (_charC.isGrounded == false)
             {
@@ -85,28 +73,22 @@ public class Movement : NetworkBehaviour
                 if (gravity >= 1)
                 {
                     Debug.Log("Player is hurt");
+                    playerHealth.Damage(fallDamage);
                     gravity = 0.7f;
                 }
                 else
                 {
                     gravity = 0.7f;
                 }
-               
+
             }
-            
+
         }
         _moveDir = new Vector3(Input.GetAxis("Horizontal"), -gravity * 2f, Input.GetAxis("Vertical")) * moveSpeed;
-        
+
         Vector3 newDirection = Vector3.RotateTowards(transform.forward, _moveDir, rotateSpeed, 0.0f);
         self.transform.rotation = Quaternion.LookRotation(newDirection);
         _charC.Move(_moveDir * Time.deltaTime);
-
-
-
-
-
-
-
 
     }
 }
