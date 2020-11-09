@@ -59,6 +59,58 @@ public class PlayerSpawnSystem : NetworkBehaviour
     }
 
     [Server]
+    public void RespawnPlayer(GameObject self)
+    {
+
+        if (teamtracker == 1)
+        {
+
+
+            Transform spawnPoint = spawnPoints.ElementAtOrDefault(firstnextIndex);
+
+
+
+
+            if (spawnPoint == null)
+            {
+                Debug.LogError("Missing spawn point for player" + firstnextIndex);
+                return;
+            }
+
+
+
+
+            self.transform.position = spawnPoint.position;
+            
+            teamtracker = 2;
+            firstnextIndex++;
+        }
+
+        else
+        {
+            Transform spawnPoint = spawnPoints1.ElementAtOrDefault(secondnextIndex);
+
+            if (spawnPoint == null)
+            {
+                Debug.LogError("Missing spawn point for player" + secondnextIndex);
+                return;
+            }
+
+
+            self.transform.position = spawnPoint.position;
+            teamtracker = 1;
+            secondnextIndex++;
+
+
+        }
+
+
+
+
+
+
+
+    }
     public void SpawnPlayer(NetworkConnection conn)
     {
 
@@ -81,6 +133,7 @@ public class PlayerSpawnSystem : NetworkBehaviour
 
 
             GameObject playerInstance = Instantiate(playerPrefab[0], spawnPoint.position, spawnPoint.rotation);
+            playerInstance.GetComponent<Health>();
             NetworkServer.Spawn(playerInstance, conn);
             teamtracker = 2;
             firstnextIndex++;
@@ -88,7 +141,7 @@ public class PlayerSpawnSystem : NetworkBehaviour
 
         else
         {
-            Transform spawnPoint = spawnPoints.ElementAtOrDefault(secondnextIndex);
+            Transform spawnPoint = spawnPoints1.ElementAtOrDefault(secondnextIndex);
 
             if (spawnPoint == null)
             {

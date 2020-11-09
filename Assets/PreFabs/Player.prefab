@@ -266,3 +266,7 @@ MonoBehaviour:
   healthCurrent: 10
   healthTotal: 10
   teamTag: 
+  firstTeam: 0
+  respawnTime: 0
+  spawn: {fileID: 0}
+  self: {fileID: 1741732765298726689}
