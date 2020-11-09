@@ -59,7 +59,7 @@ public class Movement : NetworkBehaviour
 
         if (Input.GetKeyDown("j") && _charC.isGrounded == true)
         {
-            gravity = -jumpForce;
+            _charC.Move(new Vector3(0, jumpForce, 0));
         }
 
         else
