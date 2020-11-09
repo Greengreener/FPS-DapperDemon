@@ -24,25 +24,7 @@ public class Gun : MonoBehaviour
         inv = gameObject.GetComponentInParent<Inventory>();
         playerCamera = gameObject.GetComponentInParent<Camera>();
         #region GunTypeSetting
-        switch (GunCode)
-        {
-            case 1: //HandGun
-                GunType = "Handgun";
-                Damage = 2.5f;
-                fireRate = 1;
-                gunRange = 10;
-                ammoClipCapacity = 8;
-                ammoClipCurrent = ammoClipCapacity;
-                break;
-            case 2: //Rifle
-                GunType = "Rifle";
-                Damage = 10;
-                fireRate = 2.5f;
-                gunRange = 20;
-                ammoClipCapacity = 30;
-                ammoClipCurrent = ammoClipCapacity;
-                break;
-        }
+        ResetGun();
         #endregion
     }
     void Update()
@@ -74,11 +56,37 @@ public class Gun : MonoBehaviour
         }
         else { return; }
     }
+
+    /// <summary>
+    /// Reloading summary
+    /// </summary>
     void Reload()
     {
         //inv.ammo -= ammoClipCapacity;
         //ammoClipCurrent = ammoClipCapacity;
         var spaceInClip = ammoClipCapacity - ammoClipCurrent;
         ammoClipCurrent += inv.ReloadCurrentGun(GunCode, spaceInClip);
+    }
+    public void ResetGun()
+    {
+        switch (GunCode)
+        {
+            case 1: //HandGun
+                GunType = "Handgun";
+                Damage = 2.5f;
+                fireRate = 1;
+                gunRange = 10;
+                ammoClipCapacity = 8;
+                ammoClipCurrent = ammoClipCapacity;
+                break;
+            case 2: //Rifle
+                GunType = "Rifle";
+                Damage = 10;
+                fireRate = 2.5f;
+                gunRange = 20;
+                ammoClipCapacity = 30;
+                ammoClipCurrent = ammoClipCapacity;
+                break;
+        }
     }
 }

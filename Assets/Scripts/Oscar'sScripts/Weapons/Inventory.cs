@@ -17,17 +17,14 @@ public class Inventory : MonoBehaviour
     int grenadeCapacity = 3;
     private void Awake()
     {
-        handgunAmmoCurrent = handgunAmmoCapacity;
-        rifleAmmoCurrent = rifleAmmoCapacity;
-        grenadeCurrent = grenadeCapacity;
+        RestAmmo();
     }
-
     public int ReloadCurrentGun(int _GunCode, int _spaceInClip)
     {
         int ammoIntoClip = 0;
         switch (_GunCode)
         {
-            case 1://Handgun
+            case 1: //Handgun
                 if (handgunAmmoCurrent < _spaceInClip)
                 {
                     ammoIntoClip = handgunAmmoCurrent;
@@ -39,7 +36,7 @@ public class Inventory : MonoBehaviour
                     ammoIntoClip = _spaceInClip;
                 }
                 break;
-            case 2://Rifle
+            case 2: //Rifle
                 if (rifleAmmoCurrent < _spaceInClip)
                 {
                     ammoIntoClip = rifleAmmoCurrent;
@@ -59,7 +56,7 @@ public class Inventory : MonoBehaviour
         var spaceLeftInBag = 0;
         switch (ammoTypeCode)
         {
-            case 1://Handgun                
+            case 1: //Handgun                
                 if (handgunAmmoCurrent == handgunAmmoCapacity) { return; }
                 spaceLeftInBag = handgunAmmoCapacity - handgunAmmoCurrent;
                 if (_ammoPickedUp > spaceLeftInBag)
@@ -71,7 +68,7 @@ public class Inventory : MonoBehaviour
                     handgunAmmoCurrent += _ammoPickedUp;
                 }
                 break;
-            case 2://Rifle
+            case 2: //Rifle
 
                 if (rifleAmmoCurrent == rifleAmmoCapacity) { return; }
                 spaceLeftInBag = rifleAmmoCapacity - rifleAmmoCurrent;
@@ -85,5 +82,15 @@ public class Inventory : MonoBehaviour
                 }
                 break;
         }
+    }
+    public void UseGrenade()
+    {
+        grenadeCurrent--;
+    }
+    public void ResetAmmo()
+    {
+        handgunAmmoCurrent = handgunAmmoCapacity;
+        rifleAmmoCurrent = rifleAmmoCapacity;
+        grenadeCurrent = grenadeCapacity;
     }
 }

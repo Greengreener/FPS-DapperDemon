@@ -21,13 +21,13 @@ public class Grenade : MonoBehaviour
     {
         throwDirection = GetComponentInChildren<Transform>();
         rb = GetComponent<Rigidbody>();
-        rb.AddForce(throwDirection.position * throwForce);
+        rb.AddForce(throwDirection.position * -throwForce);
 
     }
     void Update()
     {
         grenadeCountDown -= Time.deltaTime;
-        if (grenadeCountDown <= 0) Explosion();
+        if (grenadeCountDown <= 0)Explosion();
     }
     void Explosion()
     {
@@ -43,6 +43,11 @@ public class Grenade : MonoBehaviour
         }
         Destroy(this.gameObject);
     }
+
+    /// <summary>
+    /// Unfreezes the Rigidbody rotation
+    /// </summary>
+    /// <param name="other"></param>
     private void OnCollisionEnter(Collision other)
     {
         rb.constraints = RigidbodyConstraints.None;
