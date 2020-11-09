@@ -12,9 +12,7 @@ using UnityEngine.UI;
         [SerializeField] private GameObject lobbyUI = null;
         [SerializeField] private Text[] playerNameTexts = new Text[2];
         [SerializeField] private Text[] playerReadyTexts = new Text[2];
-        [SerializeField] private Text[] secondplayerNameTexts = new Text[2];
-        [SerializeField] private Text[] secondplayerReadyTexts = new Text[2];
-
+        
         [SerializeField] private Button startGameButton = null;
         private bool TeamID;
 
@@ -100,25 +98,15 @@ using UnityEngine.UI;
                 playerNameTexts[i].text = "Waiting for Player...";
                 playerReadyTexts[i].text = string.Empty;
             }
-            for (int i = 0; i < secondplayerNameTexts.Length; i++)
-        {
-            secondplayerNameTexts[i].text = "Waiting for Player...";
-            secondplayerReadyTexts[i].text = string.Empty;
-        }
-        for (int i = 0; i < Room.RoomPlayers.Count/2; i++)
+            
+        for (int i = 0; i < Room.RoomPlayers.Count; i++)
             {
                 playerNameTexts[i].text = Room.RoomPlayers[i].DisplayName;
                 playerReadyTexts[i].text = Room.RoomPlayers[i].IsReady ?
                         "<color=green>Ready</color>" :
                         "<color=red>Not Ready</color>";
             }
-        for (int i = 0; i < Room.RoomPlayers.Count/2; i++)
-        {
-            secondplayerNameTexts[i].text = Room.RoomPlayers[i + Room.RoomPlayers.Count / 2].DisplayName;
-            secondplayerReadyTexts[i].text = Room.RoomPlayers[i + Room.RoomPlayers.Count / 2].IsReady ?
-                    "<color=green>Ready</color>" :
-                    "<color=blue>Not Ready</color>";
-        }
+        
     }
 
         public void HandleReadyToStart(bool readyToStart)

@@ -11,16 +11,41 @@ public class PlayerSpawnSystem : NetworkBehaviour
     private int[] Team;
     private static List<Transform> spawnPoints = new List<Transform>();
     private static List<Transform> spawnPoints1 = new List<Transform>();
-    private int nextIndex = 0;
-
+    private int firstnextIndex = 0, secondnextIndex = 0;
+    private int teamtracker = 1;
     public static void AddSpawnPoint(Transform spawnTransform)
     {
-        spawnPoints.Add(spawnTransform);
+        if (spawnTransform.GetComponent<PlayerSpawnPoint>().TeamID == true)
+        {
+            spawnPoints.Add(spawnTransform);
 
-        spawnPoints = spawnPoints.OrderBy(x => x.GetSiblingIndex()).ToList();
+            spawnPoints = spawnPoints.OrderBy(x => x.GetSiblingIndex()).ToList();
+        }
+        else
+        {
+            spawnPoints1.Add(spawnTransform);
+
+            spawnPoints1 = spawnPoints1.OrderBy(x => x.GetSiblingIndex()).ToList();
+        }
+        
     }
 
-    public static void RemoveSpawnPoint(Transform spawnTransform) => spawnPoints.Remove(spawnTransform);
+    public static void RemoveSpawnPoint(Transform spawnTransform)
+    {
+        if (spawnTransform.GetComponent<PlayerSpawnPoint>().TeamID == true)
+        {
+            spawnPoints.Remove(spawnTransform);
+
+            
+        }
+        else
+        {
+            spawnPoints1.Remove(spawnTransform);
+
+            
+        }
+        
+    }
 
     public override void OnStartServer()
     {
@@ -37,50 +62,50 @@ public class PlayerSpawnSystem : NetworkBehaviour
     public void SpawnPlayer(NetworkConnection conn)
     {
 
-
-        if (Team[0] < Team[1])
+        if (teamtracker == 1)
         {
-            Transform spawnPoint = spawnPoints.ElementAtOrDefault(nextIndex);
-            while (spawnPoint.tag == "TeamA")
-            {
-                spawnPoint = null;
-                spawnPoint = spawnPoints.ElementAtOrDefault(nextIndex);
-            }
+
+
+            Transform spawnPoint = spawnPoints.ElementAtOrDefault(firstnextIndex);
+            
+              
+               
+            
             if (spawnPoint == null)
             {
-                Debug.LogError("Missing spawn point for player" + nextIndex);
+                Debug.LogError("Missing spawn point for player" + firstnextIndex);
                 return;
             }
-            
 
 
 
-                GameObject playerInstance = Instantiate(playerPrefab[0], spawnPoint.position, spawnPoint.rotation);
-                NetworkServer.Spawn(playerInstance, conn);
-                Team[0] += 1;
-            
-            
+
+            GameObject playerInstance = Instantiate(playerPrefab[0], spawnPoint.position, spawnPoint.rotation);
+            NetworkServer.Spawn(playerInstance, conn);
+            teamtracker = 2;
+            firstnextIndex++;
         }
+
         else
         {
-            Transform spawnPoint = spawnPoints.ElementAtOrDefault(nextIndex);
+            Transform spawnPoint = spawnPoints.ElementAtOrDefault(secondnextIndex);
 
             if (spawnPoint == null)
             {
-                Debug.LogError("Missing spawn point for player" + nextIndex);
+                Debug.LogError("Missing spawn point for player" + secondnextIndex);
                 return;
             }
-            if (spawnPoint.tag != "TeamA")
-            {
-
+           
 
                 GameObject playerInstance = Instantiate(playerPrefab[1], spawnPoint.position, spawnPoint.rotation);
                 NetworkServer.Spawn(playerInstance, conn);
-                Team[1] += 1;
-            }
+            teamtracker = 1;
+            secondnextIndex++;
+
+            
         }
         
-        nextIndex++;
+        
 
 
 

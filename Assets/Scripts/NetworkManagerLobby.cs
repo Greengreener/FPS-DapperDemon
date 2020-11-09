@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 public class NetworkManagerLobby : NetworkManager
 {
-    [SerializeField] private int minPlayers = 4;
+    [SerializeField] private int minPlayers = 2;
     [Scene][SerializeField] private string menuScene = string.Empty;
 
     [Header("Room")]
@@ -18,7 +18,7 @@ public class NetworkManagerLobby : NetworkManager
 
     [Header("Game")]
     [SerializeField] private NetworkGamePlayer gamePlayerPrefab = null;
-    [SerializeField] private GameObject[] playerSpawnSystem = null;
+    [SerializeField] private GameObject playerSpawnSystem = null;
 
     private bool TeamA;
     public event Action onClientConnected;
@@ -152,7 +152,7 @@ public class NetworkManagerLobby : NetworkManager
                 return;
             }
 
-            ServerChangeScene("Game_Map_01");
+            ServerChangeScene("MitchellTest");
         }
     }
 
@@ -160,7 +160,7 @@ public class NetworkManagerLobby : NetworkManager
     public override void ServerChangeScene(string newSceneName)
     {
         //from menu to game
-        if(SceneManager.GetActiveScene().path == menuScene && newSceneName.StartsWith("Game_Map"))
+        if(SceneManager.GetActiveScene().path == menuScene && newSceneName.StartsWith("MitchellTest"))
         {
             for(int i = RoomPlayers.Count -1; i >= 0; i--)
             {
@@ -182,16 +182,10 @@ public class NetworkManagerLobby : NetworkManager
     {
         if (sceneName.StartsWith("MitchellTest"))
         {
-            GameObject playerSpawnSystemInstanceA = Instantiate(playerSpawnSystem[0]);
-            GameObject playerSpawnSystemInstanceB = Instantiate(playerSpawnSystem[1]);
-            if (TeamA == true)
-            {
+            GameObject playerSpawnSystemInstanceA = Instantiate(playerSpawnSystem);
+            
                 NetworkServer.Spawn(playerSpawnSystemInstanceA);
-            }
-            else
-            {
-                NetworkServer.Spawn(playerSpawnSystemInstanceB);
-            }
+            
             
         }
     }

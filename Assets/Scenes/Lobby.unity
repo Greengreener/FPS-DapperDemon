@@ -305,8 +305,8 @@ MonoBehaviour:
   autoStartServerBuild: 1
   showDebugMessages: 0
   serverTickRate: 30
-  offlineScene: Assets/Scenes/Lobby.unity
-  onlineScene: Assets/Scenes/MitchellTest.unity
+  offlineScene: 
+  onlineScene: Assets/Scenes/Lobby.unity
   transport: {fileID: 1138880162}
   networkAddress: localhost
   maxConnections: 4
@@ -317,15 +317,16 @@ MonoBehaviour:
     type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
-  spawnPrefabs: []
-  minPlayers: 4
+  spawnPrefabs:
+  - {fileID: 1741732765298726689, guid: 21421b4af5a68ac4fa03c55ba3fecf26, type: 3}
+  minPlayers: 1
   menuScene: Assets/Scenes/Lobby.unity
-  roomPlayerPrefab: {fileID: 0}
+  roomPlayerPrefab: {fileID: 2557502924886572251, guid: c2de805c9b00cdc49a22a9b4c39137b0,
+    type: 3}
   gamePlayerPrefab: {fileID: -2212001093032426636, guid: 9728fbd937e491f419396f678e787e72,
     type: 3}
-  playerSpawnSystem:
-  - {fileID: 8906539459577147575, guid: 16b9b0bc78cb7dc44b04ed247e009374, type: 3}
-  - {fileID: 8906539459577147575, guid: d31b1b26a96f9f846a1ac521685d82ed, type: 3}
+  playerSpawnSystem: {fileID: 8906539459577147575, guid: 16b9b0bc78cb7dc44b04ed247e009374,
+    type: 3}
 --- !u!114 &1138880162
 MonoBehaviour:
   m_ObjectHideFlags: 0
