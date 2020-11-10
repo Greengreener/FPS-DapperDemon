@@ -60,10 +60,10 @@ Material:
     - _ShadowContribuation: 1
     - _ShadowContribuation1: 1
     - _StaticHighlights: 1
-    - _TessMax: 0.16
-    - _TessMin: 25.09
+    - _TessMax: 25
+    - _TessMin: 10
     - _TessPhongStrength: 1
-    - _TessValue: 32
+    - _TessValue: 3.1
     - __dirty: 0
     m_Colors:
     - _HiglightTint: {r: 1, g: 0.74669576, b: 0, a: 1}
