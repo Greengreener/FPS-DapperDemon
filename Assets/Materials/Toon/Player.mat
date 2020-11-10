@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player
+  m_Shader: {fileID: 4800000, guid: f9deb9a4a53422342b9a948b3cb6e771, type: 3}
+  m_ShaderKeywords: _STATICHIGHLIGHTS_ON
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTexture:
+        m_Texture: {fileID: 2800000, guid: 74e10184675191e4a893cc31544b66ff, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTexture1:
+        m_Texture: {fileID: 2800000, guid: bcc8fc05f1f924531a65f39394c0b703, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 9b7f15a6aed32924c8c88384c2077a3b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap1:
+        m_Texture: {fileID: 2800000, guid: 9b7f15a6aed32924c8c88384c2077a3b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: 74e10184675191e4a893cc31544b66ff, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BaseCellOffset: -0.087
+    - _BaseCellOffset1: 0.145
+    - _BaseCellSharpness: 0.01
+    - _BaseCellSharpness1: 0.01
+    - _EdgeLength: 15
+    - _FloatScale1: 0.411
+    - _HighLightCellSharpness: 0.406
+    - _HighlightCellOffset: -0.5
+    - _IndirectDiffuseContribuation: 0.679
+    - _IndirectDiffuseContribuation1: 0.26
+    - _IndirectSpecularContribuation: 0
+    - _OutlineWidth: 0.1153
+    - _OutlineWidth1: 0.2
+    - _ShadowContribuation: 1
+    - _ShadowContribuation1: 1
+    - _StaticHighlights: 1
+    - _TessMax: 0.16
+    - _TessMin: 25.09
+    - _TessPhongStrength: 1
+    - _TessValue: 3.5
+    - __dirty: 0
+    m_Colors:
+    - _HiglightTint: {r: 0, g: 0.34914395, b: 0.50980395, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
+    - _OutlineColor1: {r: 0, g: 0, b: 0, a: 0}
+    - _Tint: {r: 0.05724907, g: 0, b: 1, a: 1}
+    - _Tint1: {r: 1, g: 0.7065868, b: 0, a: 1}
