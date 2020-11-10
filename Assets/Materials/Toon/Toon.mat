@@ -19,12 +19,24 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _MainTexture:
+        m_Texture: {fileID: 2800000, guid: bcc8fc05f1f924531a65f39394c0b703, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTexture1:
         m_Texture: {fileID: 2800000, guid: bcc8fc05f1f924531a65f39394c0b703, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 9b7f15a6aed32924c8c88384c2077a3b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _NormalMap1:
-        m_Texture: {fileID: 2800000, guid: 683eb66e44ab5f740ba99d7cd93070af, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9b7f15a6aed32924c8c88384c2077a3b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: bcc8fc05f1f924531a65f39394c0b703, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -32,13 +44,30 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _BaseCellOffset1: 0.213
-    - _BaseCellSharpness1: 1
+    - _BaseCellOffset: -0.771
+    - _BaseCellOffset1: 0.145
+    - _BaseCellSharpness: 0.01
+    - _BaseCellSharpness1: 0.01
+    - _EdgeLength: 15
     - _FloatScale1: 0.411
-    - _IndirectDiffuseContribuation1: 0
-    - _OutlineWidth1: 0.1264
+    - _HighLightCellSharpness: 1
+    - _HighlightCellOffset: -0.5
+    - _IndirectDiffuseContribuation: 0
+    - _IndirectDiffuseContribuation1: 0.26
+    - _IndirectSpecularContribuation: 0.474
+    - _OutlineWidth: 0.2
+    - _OutlineWidth1: 0.2
+    - _ShadowContribuation: 1
     - _ShadowContribuation1: 1
+    - _StaticHighlights: 0
+    - _TessMax: 1
+    - _TessMin: 5.83
+    - _TessPhongStrength: 1
+    - _TessValue: 7.6
     - __dirty: 0
     m_Colors:
+    - _HiglightTint: {r: 1, g: 0.74669576, b: 0, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
     - _OutlineColor1: {r: 0, g: 0, b: 0, a: 0}
-    - _Tint1: {r: 1, g: 1, b: 1, a: 1}
+    - _Tint: {r: 0.018367037, g: 0.41509432, b: 0, a: 1}
+    - _Tint1: {r: 1, g: 0.7065868, b: 0, a: 1}

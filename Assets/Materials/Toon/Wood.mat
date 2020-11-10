@@ -8,8 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Wood
-  m_Shader: {fileID: -6465566751694194690, guid: 4787996d8e0d52c48826f54ad64a7230,
-    type: 3}
+  m_Shader: {fileID: 4800000, guid: f9deb9a4a53422342b9a948b3cb6e771, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -20,21 +19,55 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_19F1552D:
+    - _MainTexture:
+        m_Texture: {fileID: 2800000, guid: 0ce4715b95ec59e4ca799c740a5e144a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTexture1:
+        m_Texture: {fileID: 2800000, guid: bcc8fc05f1f924531a65f39394c0b703, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
         m_Texture: {fileID: 2800000, guid: 9b7f15a6aed32924c8c88384c2077a3b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - Texture2D_690204A4:
+    - _NormalMap1:
+        m_Texture: {fileID: 2800000, guid: 9b7f15a6aed32924c8c88384c2077a3b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: 0ce4715b95ec59e4ca799c740a5e144a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_75900AED: 50
-    - Vector1_A53EAA5E: -30
-    - Vector1_CC57A1F: 114.7
+    - _BaseCellOffset: -0.771
+    - _BaseCellOffset1: 0.145
+    - _BaseCellSharpness: 0.01
+    - _BaseCellSharpness1: 0.01
+    - _EdgeLength: 15
+    - _FloatScale1: 0.411
+    - _HighLightCellSharpness: 1
+    - _HighlightCellOffset: -0.5
+    - _IndirectDiffuseContribuation: 0
+    - _IndirectDiffuseContribuation1: 0.26
+    - _IndirectSpecularContribuation: 0.474
+    - _OutlineWidth: 0.2
+    - _OutlineWidth1: 0.2
+    - _ShadowContribuation: 1
+    - _ShadowContribuation1: 1
+    - _StaticHighlights: 0
+    - _TessMax: 1
+    - _TessMin: 5.83
+    - _TessPhongStrength: 1
+    - _TessValue: 7.6
+    - __dirty: 0
     m_Colors:
-    - Color_14629472: {r: 1, g: 1, b: 1, a: 1}
-    - Color_5116B259: {r: 0, g: 0, b: 0, a: 1}
-    - Color_CF2DEE43: {r: 1, g: 1, b: 1, a: 1}
-    - _L1_color: {r: 0.5471698, g: 0.42664027, b: 0.31746173, a: 1}
-    - _L1_dir: {r: 0, g: 13, b: 0, a: 0}
+    - _HiglightTint: {r: 1, g: 0.74669576, b: 0, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
+    - _OutlineColor1: {r: 0, g: 0, b: 0, a: 0}
+    - _Tint: {r: 0.41568628, g: 0.28215438, b: 0, a: 1}
+    - _Tint1: {r: 1, g: 0.7065868, b: 0, a: 1}
