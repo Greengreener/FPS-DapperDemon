@@ -8,13 +8,13 @@ public class Grenade : MonoBehaviour
     [SerializeField]
     Collider[] damagedPlayer;
     [SerializeField]
-    float grenadeCountDown;
+    float grenadeCountDown = 0;
     [SerializeField]
-    float grenadeRange;
+    float grenadeRange = 0;
     [SerializeField]
-    float granadeDamage;
+    float granadeDamage = 0;
     [SerializeField]
-    float throwForce;
+    float throwForce = 0;
     Rigidbody rb;
     Transform throwDirection;
     void Start()

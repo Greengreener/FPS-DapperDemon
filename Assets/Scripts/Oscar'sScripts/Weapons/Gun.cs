@@ -11,13 +11,14 @@ public class Gun : MonoBehaviour
     public int GunCode;
     [SerializeField]
     public string GunType = "";
-    public float Damage;
-    float fireRate;
+    public float Damage = 0;
+    float fireRate = 0;
     [SerializeField]
-    public int ammoClipCurrent;
-    int ammoClipCapacity;
-    float gunRange;
+    public int ammoClipCurrent = 0;
+    int ammoClipCapacity = 0;
+    float gunRange = 0;
     Camera playerCamera;
+    
     void Awake()
     {
         player = gameObject.GetComponentInParent<Health>();

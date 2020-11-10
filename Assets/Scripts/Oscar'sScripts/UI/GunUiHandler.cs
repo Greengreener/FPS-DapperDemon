@@ -14,7 +14,7 @@ public class GunUiHandler : MonoBehaviour
     Text clipAmmo;
     [SerializeField]
     Text bagAmmo;
-    int currentGunCode;
+    int currentGunCode  = 0;
     void Start()
     {
         playerInv = GetComponentInParent<Inventory>();

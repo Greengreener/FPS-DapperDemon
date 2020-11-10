@@ -17,7 +17,7 @@ public class Inventory : MonoBehaviour
     int grenadeCapacity = 3;
     private void Awake()
     {
-        RestAmmo();
+        ResetAmmo();
     }
     public int ReloadCurrentGun(int _GunCode, int _spaceInClip)
     {
