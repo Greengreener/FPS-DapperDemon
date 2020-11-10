@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['partialserverjson_1783',['PartialServerJson',['../struct_mirror_1_1_cloud_1_1_list_server_service_1_1_partial_server_json.html',1,'Mirror::Cloud::ListServerService']]],
+  ['pendingplayer_1784',['PendingPlayer',['../struct_mirror_1_1_network_room_manager_1_1_pending_player.html',1,'Mirror::NetworkRoomManager']]],
+  ['physicscollision_1785',['PhysicsCollision',['../class_mirror_1_1_examples_1_1_multiple_additive_scenes_1_1_physics_collision.html',1,'Mirror::Examples::MultipleAdditiveScenes']]],
+  ['physicssimulator_1786',['PhysicsSimulator',['../class_mirror_1_1_examples_1_1_multiple_additive_scenes_1_1_physics_simulator.html',1,'Mirror::Examples::MultipleAdditiveScenes']]],
+  ['pingpongmanager_1787',['PingPongManager',['../class_ninja_1_1_web_sockets_1_1_ping_pong_manager.html',1,'Ninja::WebSockets']]],
+  ['player_1788',['Player',['../class_mirror_1_1_cloud_1_1_examples_1_1_pong_1_1_player.html',1,'Mirror.Cloud.Examples.Pong.Player'],['../class_mirror_1_1_examples_1_1_pong_1_1_player.html',1,'Mirror.Examples.Pong.Player'],['../class_mirror_1_1_examples_1_1_basic_1_1_player.html',1,'Mirror.Examples.Basic.Player'],['../class_mirror_1_1_examples_1_1_chat_1_1_player.html',1,'Mirror.Examples.Chat.Player']]],
+  ['playercontroller_1789',['PlayerController',['../class_mirror_1_1_examples_1_1_multiple_additive_scenes_1_1_player_controller.html',1,'Mirror.Examples.MultipleAdditiveScenes.PlayerController'],['../class_mirror_1_1_examples_1_1_network_room_1_1_player_controller.html',1,'Mirror.Examples.NetworkRoom.PlayerController'],['../class_mirror_1_1_examples_1_1_additive_1_1_player_controller.html',1,'Mirror.Examples.Additive.PlayerController']]],
+  ['playermovement_1790',['PlayerMovement',['../class_mirror_1_1_examples_1_1_one_k_1_1_player_movement.html',1,'Mirror::Examples::OneK']]],
+  ['playernameinput_1791',['PlayerNameInput',['../class_player_name_input.html',1,'']]],
+  ['playerscore_1792',['PlayerScore',['../class_mirror_1_1_examples_1_1_multiple_additive_scenes_1_1_player_score.html',1,'Mirror.Examples.MultipleAdditiveScenes.PlayerScore'],['../class_mirror_1_1_examples_1_1_network_room_1_1_player_score.html',1,'Mirror.Examples.NetworkRoom.PlayerScore']]],
+  ['playerspawnpoint_1793',['PlayerSpawnPoint',['../class_player_spawn_point.html',1,'']]],
+  ['playerspawnsystem_1794',['PlayerSpawnSystem',['../class_player_spawn_system.html',1,'']]],
+  ['playeruihandler_1795',['PlayerUiHandler',['../class_player_ui_handler.html',1,'']]],
+  ['pongeventargs_1796',['PongEventArgs',['../class_ninja_1_1_web_sockets_1_1_pong_event_args.html',1,'Ninja::WebSockets']]],
+  ['poolednetworkreader_1797',['PooledNetworkReader',['../class_mirror_1_1_pooled_network_reader.html',1,'Mirror']]],
+  ['poolednetworkwriter_1798',['PooledNetworkWriter',['../class_mirror_1_1_pooled_network_writer.html',1,'Mirror']]],
+  ['preprocessordefine_1799',['PreprocessorDefine',['../class_mirror_1_1_preprocessor_define.html',1,'Mirror']]],
+  ['projectile_1800',['Projectile',['../class_mirror_1_1_examples_1_1_tanks_1_1_projectile.html',1,'Mirror::Examples::Tanks']]],
+  ['propertysiteprocessor_1801',['PropertySiteProcessor',['../class_mirror_1_1_weaver_1_1_property_site_processor.html',1,'Mirror::Weaver']]],
+  ['publicbuffermemorystream_1802',['PublicBufferMemoryStream',['../class_ninja_1_1_web_sockets_1_1_buffer_pool_1_1_public_buffer_memory_stream.html',1,'Ninja::WebSockets::BufferPool']]]
+];
