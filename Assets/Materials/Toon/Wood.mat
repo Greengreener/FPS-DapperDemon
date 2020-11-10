@@ -63,7 +63,7 @@ Material:
     - _TessMax: 0.16
     - _TessMin: 25.09
     - _TessPhongStrength: 1
-    - _TessValue: 5.9
+    - _TessValue: 32
     - __dirty: 0
     m_Colors:
     - _HiglightTint: {r: 1, g: 0.74669576, b: 0, a: 1}

@@ -12,11 +12,11 @@ using UnityEngine.UI;
         [SerializeField] private GameObject lobbyUI = null;
         [SerializeField] private Text[] playerNameTexts = new Text[2];
         [SerializeField] private Text[] playerReadyTexts = new Text[2];
-        
+    [SerializeField] private InputField lobbyName;
         [SerializeField] private Button startGameButton = null;
         private bool TeamID;
-
-        [SyncVar(hook = nameof(HandleDisplayNameChanged))]
+    [SerializeField] private NetworkManagerLobby networkManager = null;
+    [SyncVar(hook = nameof(HandleDisplayNameChanged))]
         public string DisplayName = "Loading...";
         [SyncVar(hook = nameof(HandleReadyStatusChanged))]
         public bool IsReady = false;
@@ -33,8 +33,18 @@ using UnityEngine.UI;
                 }
             }
         }
-
-        private NetworkManagerLobby room;
+    private void Start()
+    {
+        networkManager = FindObjectOfType<NetworkManagerLobby>();
+    }
+    private void Update()
+    {
+        if (networkManager.networkAddress != lobbyName.text)
+        {
+            networkManager.networkAddress = lobbyName.text;
+        }
+    }
+    private NetworkManagerLobby room;
         private NetworkManagerLobby Room
         {
             get

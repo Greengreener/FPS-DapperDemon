@@ -16,8 +16,8 @@ public class CameraLook : MonoBehaviour
     public float minY = -60, maxY = 60;
     private float _rotY;
 
-    private Light torch;
-    bool torchOnOff;
+    //private Light torch;
+    //bool torchOnOff;
     void Start()
     {
         //Lock the cursor
@@ -28,18 +28,18 @@ public class CameraLook : MonoBehaviour
         {
             axis = RotationalAxis.MouseY;
         }
-        torch = GetComponentInChildren<Light>();
-        torch.gameObject.SetActive(false);
-        torchOnOff = !torch.gameObject.activeSelf;
+        //torch = GetComponentInChildren<Light>();
+        //torch.gameObject.SetActive(false);
+        //torchOnOff = !torch.gameObject.activeSelf;
 
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        /*if (Input.GetKeyDown(KeyCode.F))
         {
             torch.gameObject.SetActive(torchOnOff);
             torchOnOff = !torchOnOff;
-        }
+        }*/
         if (axis == RotationalAxis.MouseX)
         {
             transform.Rotate(0, Input.GetAxis("Mouse X") * sensetivity * Time.deltaTime, 0);
