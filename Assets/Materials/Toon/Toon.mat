@@ -50,12 +50,12 @@ Material:
     - _BaseCellSharpness1: 0.01
     - _EdgeLength: 15
     - _FloatScale1: 0.411
-    - _HighLightCellSharpness: 0.406
+    - _HighLightCellSharpness: 0.303
     - _HighlightCellOffset: -0.5
     - _IndirectDiffuseContribuation: 0.679
     - _IndirectDiffuseContribuation1: 0.26
     - _IndirectSpecularContribuation: 0
-    - _OutlineWidth: 0.1153
+    - _OutlineWidth: 0.0537
     - _OutlineWidth1: 0.2
     - _ShadowContribuation: 1
     - _ShadowContribuation1: 1
@@ -63,7 +63,7 @@ Material:
     - _TessMax: 0.16
     - _TessMin: 25.09
     - _TessPhongStrength: 1
-    - _TessValue: 4.4
+    - _TessValue: 5.9
     - __dirty: 0
     m_Colors:
     - _HiglightTint: {r: 0, g: 0.509434, b: 0.1085917, a: 1}
