@@ -10,7 +10,7 @@ Material:
   m_Name: Water
   m_Shader: {fileID: 4800000, guid: f9deb9a4a53422342b9a948b3cb6e771, type: 3}
   m_ShaderKeywords: _STATICHIGHLIGHTS_ON
-  m_LightmapFlags: 4
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -63,10 +63,10 @@ Material:
     - _TessMax: 0.16
     - _TessMin: 25.09
     - _TessPhongStrength: 1
-    - _TessValue: 3.5
+    - _TessValue: 4.4
     - __dirty: 0
     m_Colors:
-    - _HiglightTint: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 1}
+    - _HiglightTint: {r: 0, g: 0.16973758, b: 1, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
     - _OutlineColor1: {r: 0, g: 0, b: 0, a: 0}
     - _Tint: {r: 0.8443396, g: 1, b: 0.9969198, a: 1}
