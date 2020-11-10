@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Wood
   m_Shader: {fileID: 4800000, guid: f9deb9a4a53422342b9a948b3cb6e771, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _STATICHIGHLIGHTS_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -44,26 +44,26 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _BaseCellOffset: -0.771
+    - _BaseCellOffset: -0.087
     - _BaseCellOffset1: 0.145
     - _BaseCellSharpness: 0.01
     - _BaseCellSharpness1: 0.01
     - _EdgeLength: 15
     - _FloatScale1: 0.411
-    - _HighLightCellSharpness: 1
+    - _HighLightCellSharpness: 0.406
     - _HighlightCellOffset: -0.5
-    - _IndirectDiffuseContribuation: 0
+    - _IndirectDiffuseContribuation: 0.679
     - _IndirectDiffuseContribuation1: 0.26
-    - _IndirectSpecularContribuation: 0.474
-    - _OutlineWidth: 0.2
+    - _IndirectSpecularContribuation: 0
+    - _OutlineWidth: 0.1153
     - _OutlineWidth1: 0.2
     - _ShadowContribuation: 1
     - _ShadowContribuation1: 1
-    - _StaticHighlights: 0
-    - _TessMax: 1
-    - _TessMin: 5.83
+    - _StaticHighlights: 1
+    - _TessMax: 0.16
+    - _TessMin: 25.09
     - _TessPhongStrength: 1
-    - _TessValue: 7.6
+    - _TessValue: 3.5
     - __dirty: 0
     m_Colors:
     - _HiglightTint: {r: 1, g: 0.74669576, b: 0, a: 1}
