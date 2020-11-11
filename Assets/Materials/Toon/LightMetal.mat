@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Metal
+  m_Name: LightMetal
   m_Shader: {fileID: 4800000, guid: f9deb9a4a53422342b9a948b3cb6e771, type: 3}
   m_ShaderKeywords: _STATICHIGHLIGHTS_ON
   m_LightmapFlags: 4

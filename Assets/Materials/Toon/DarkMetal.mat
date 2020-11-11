@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Metal
+  m_Name: DarkMetal
   m_Shader: {fileID: 4800000, guid: f9deb9a4a53422342b9a948b3cb6e771, type: 3}
   m_ShaderKeywords: _STATICHIGHLIGHTS_ON
   m_LightmapFlags: 4
@@ -69,5 +69,5 @@ Material:
     - _HiglightTint: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
     - _OutlineColor1: {r: 0, g: 0, b: 0, a: 0}
-    - _Tint: {r: 0.8443396, g: 1, b: 0.9969198, a: 1}
+    - _Tint: {r: 0.64760596, g: 0.6537993, b: 0.9339623, a: 1}
     - _Tint1: {r: 1, g: 0.7065868, b: 0, a: 1}

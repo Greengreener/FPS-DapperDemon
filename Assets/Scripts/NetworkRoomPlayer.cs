@@ -5,6 +5,8 @@ using Mirror;
 using TMPro;
 using UnityEngine.UI;
 
+using System.Net;
+
 
     public class NetworkRoomPlayer : NetworkBehaviour
     {
@@ -41,7 +43,20 @@ using UnityEngine.UI;
     {
         if (networkManager.networkAddress != lobbyName.text)
         {
-            networkManager.networkAddress = lobbyName.text;
+            string text = networkManager.networkAddress;
+            IPHostEntry host;
+            string localIP = "0.0.0.0";
+            host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach(IPAddress ip in host.AddressList)
+            {
+                if(ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+                {
+                    localIP = ip.ToString();
+                    break;
+                }
+            }
+
+            lobbyName.text = localIP;
         }
     }
     private NetworkManagerLobby room;
