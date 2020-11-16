@@ -18,11 +18,12 @@ using System.Net;
         [SerializeField] private Button startGameButton = null;
         private bool TeamID;
     [SerializeField] private NetworkManagerLobby networkManager = null;
+    [SerializeField] private NetworkRoomPlayer RoomManager = null;
     [SyncVar(hook = nameof(HandleDisplayNameChanged))]
         public string DisplayName = "Loading...";
         [SyncVar(hook = nameof(HandleReadyStatusChanged))]
         public bool IsReady = false;
-
+        public GameObject self;
         private bool isLeader = false;
         public bool IsLeader
         {
@@ -38,6 +39,12 @@ using System.Net;
     private void Start()
     {
         networkManager = FindObjectOfType<NetworkManagerLobby>();
+        RoomManager = FindObjectOfType<NetworkRoomPlayer>();
+        //self = this.gameObject;
+        if (RoomManager != null)
+        {
+            Destroy(self);
+        }
     }
     private void Update()
     {
