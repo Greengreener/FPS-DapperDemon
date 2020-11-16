@@ -39,12 +39,9 @@ using System.Net;
     private void Start()
     {
         networkManager = FindObjectOfType<NetworkManagerLobby>();
-        RoomManager = FindObjectOfType<NetworkRoomPlayer>();
+        //RoomManager = FindObjectOfType<NetworkRoomPlayer>();
         //self = this.gameObject;
-        if (RoomManager != null)
-        {
-            Destroy(self);
-        }
+       
     }
     private void Update()
     {
