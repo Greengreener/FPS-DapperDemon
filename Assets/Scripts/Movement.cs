@@ -6,10 +6,14 @@ public class Movement : NetworkBehaviour
 {
     [Header("Speed Vars")]
     //value Variables
+    //set how fawst you can move and rotate
     public float moveSpeed, rotateSpeed;
+    //sets how fast you can walk and run
     public float walkSpeed, runSpeed;
+    //controls how fast you fall and how high can you jump
     public float gravity, jumpForce;
     //Struct - Contains Multiple Variables (eg...3 floats)
+    //controls where your character goes
     private Vector3 _moveDir;
     //Reference Variable
     [SerializeField]
@@ -84,10 +88,17 @@ public class Movement : NetworkBehaviour
             }
 
         }
-        _moveDir = new Vector3(Input.GetAxis("Horizontal"), -gravity * 2f, Input.GetAxis("Vertical")) * moveSpeed;
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
 
-        Vector3 newDirection = Vector3.RotateTowards(transform.forward, _moveDir, rotateSpeed, 0.0f);
-        self.transform.rotation = Quaternion.LookRotation(newDirection);
+        //_moveDir = new Vector3(horizontal, -gravity * 2f, vertical) * moveSpeed;
+        Vector3 forward = transform.forward * vertical;
+        Vector3 right = transform.right * horizontal;
+        _moveDir = (forward + right) * moveSpeed;
+        _moveDir.y = -gravity * 2f;
+
+        //Vector3 newDirection = Vector3.RotateTowards(transform.forward, _moveDir, rotateSpeed, 0.0f);
+        //self.transform.rotation = Quaternion.LookRotation(newDirection);
         _charC.Move(_moveDir * Time.deltaTime);
 
     }
