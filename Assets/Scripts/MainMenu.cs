@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
+    //desiginates the network manager lobby
     [SerializeField] private NetworkManagerLobby networkManager = null;
 
     [Header("UI")]
+    //desiginates a landing page panel
     [SerializeField] private GameObject landingPagePanel = null;
 
     public void Start()
     {
+        //shows specific error messages to indicate issues
         if(networkManager == null)
         {
             Debug.LogError("networkManager not attached to MainMenu");
@@ -24,8 +27,9 @@ public class MainMenu : MonoBehaviour
 
     public void HostLobby()
     {
+        //makes you the host of the lobby
         networkManager.StartHost();
-
+        //deactivates the landing page panel
         landingPagePanel.SetActive(false);
     }
 

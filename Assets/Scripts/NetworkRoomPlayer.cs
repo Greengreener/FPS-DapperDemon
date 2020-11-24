@@ -11,20 +11,34 @@ using System.Net;
     public class NetworkRoomPlayer : NetworkBehaviour
     {
         [Header("UI")]
+        //designates a lobbyUI
         [SerializeField] private GameObject lobbyUI = null;
+        //adds two player name texts
         [SerializeField] private Text[] playerNameTexts = new Text[2];
+        //adds two player ready texts
         [SerializeField] private Text[] playerReadyTexts = new Text[2];
+        //desiginates an input field called lobbyname 
     [SerializeField] private InputField lobbyName;
+        //desiginates a button called start game button
         [SerializeField] private Button startGameButton = null;
+        //adds a bool called TeamID
         private bool TeamID;
+        //adds a Network Manager Lobby calles network manager
     [SerializeField] private NetworkManagerLobby networkManager = null;
+    //adds a network room player called room manager
     [SerializeField] private NetworkRoomPlayer RoomManager = null;
+
     [SyncVar(hook = nameof(HandleDisplayNameChanged))]
+    //sets the display name string as loading by default
         public string DisplayName = "Loading...";
         [SyncVar(hook = nameof(HandleReadyStatusChanged))]
+        //sets a bool called is ready to false
         public bool IsReady = false;
+        //used to desiginate what is this self
         public GameObject self;
+        //sets a bool called is leader false
         private bool isLeader = false;
+        //matches the is leader based on whether the start game button is active
         public bool IsLeader
         {
             set
@@ -38,6 +52,7 @@ using System.Net;
         }
     private void Start()
     {
+        //sets the network manager
         networkManager = FindObjectOfType<NetworkManagerLobby>();
         //RoomManager = FindObjectOfType<NetworkRoomPlayer>();
         //self = this.gameObject;
@@ -45,6 +60,7 @@ using System.Net;
     }
     private void Update()
     {
+        
         if (networkManager.networkAddress != lobbyName.text)
         {
             string text = networkManager.networkAddress;
@@ -67,7 +83,7 @@ using System.Net;
         private NetworkManagerLobby Room
         {
             get
-            {
+            {//sets the Room to the network manager manager
                 if (room != null)
                 {
                     return room;
@@ -79,6 +95,7 @@ using System.Net;
 
         public override void OnStartAuthority()
         {
+                //displays the players name when you join the lobby
             CmdSetDisplayName(PlayerNameInput.DisplayName);
 
             lobbyUI.SetActive(true);
@@ -86,28 +103,31 @@ using System.Net;
 
         public override void OnStartClient()
         {
+            //adds this script to the room players
             Room.RoomPlayers.Add(this);
             UpdateDisplay();
         }
 
         public override void OnStopClient()
         {
+        //removes this script from the room players
             Room.RoomPlayers.Remove(this);
             UpdateDisplay();
         }
-
+        //changes the display name
         public void HandleDisplayNameChanged(string oldValue, string newValue)
         {
+            
             UpdateDisplay();
         }
-
+        //changes the ready status
         public void HandleReadyStatusChanged(bool oldValue, bool newValue)
         {
             UpdateDisplay();
         }
 
         private void UpdateDisplay()
-        {
+        { //updates the status of the players so you see who is ready and what are their names
             if (!isLocalPlayer)
             {
                 foreach (var player in Room.RoomPlayers)
@@ -140,6 +160,7 @@ using System.Net;
 
         public void HandleReadyToStart(bool readyToStart)
         {
+        //makes the start button interactable when you are ready to start
             if (!isLeader)
             {
                 return;
@@ -151,12 +172,14 @@ using System.Net;
         [Command]
         private void CmdSetDisplayName(string displayName)
         {
+            //set the display name to this value
             this.DisplayName = displayName;
         }
 
         [Command]
         public void CmdReadyUp()
-        {
+        {   
+            //notifies the other players that you are ready
             IsReady = !IsReady;
 
             Room.NotifyPlayersOfReadyState();
@@ -169,7 +192,7 @@ using System.Net;
             {
                 return;
             }
-
+            //starts the game
             Room.StartGame();
         }
     }
