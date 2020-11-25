@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(MeshRenderer))]
 public class WaterManager : MonoBehaviour
 {
+    //script that alters the vertices of a plane based on the waves generated
     private MeshFilter meshFilter;
     private void Awake()
     {

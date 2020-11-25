@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
+    // scripts that moves objects up and down at a fixed rate that resemblies waves.
     public static WaveManager instance;
 
     public float amplitude = 1f;

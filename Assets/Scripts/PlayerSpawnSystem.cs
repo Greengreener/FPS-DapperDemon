@@ -7,14 +7,19 @@ using UnityEngine;
 
 public class PlayerSpawnSystem : NetworkBehaviour
 {
+    //adds an array for the player prefabs
     [SerializeField] private GameObject[] playerPrefab = null;
+    //allows you to desiginate number of teams
     private int[] Team;
+    //creates a list of spawn points for the first team and the second
     private static List<Transform> spawnPoints = new List<Transform>();
     private static List<Transform> spawnPoints1 = new List<Transform>();
+    //ints to measure number of people on the two teams
     private int firstnextIndex = 0, secondnextIndex = 0;
     private int teamtracker = 1;
     public static void AddSpawnPoint(Transform spawnTransform)
     {
+        //adds spawn points to list based on their team id
         if (spawnTransform.GetComponent<PlayerSpawnPoint>().TeamID == true)
         {
             spawnPoints.Add(spawnTransform);
@@ -32,6 +37,7 @@ public class PlayerSpawnSystem : NetworkBehaviour
 
     public static void RemoveSpawnPoint(Transform spawnTransform)
     {
+        //removes spawn points from the list based pn their team id
         if (spawnTransform.GetComponent<PlayerSpawnPoint>().TeamID == true)
         {
             spawnPoints.Remove(spawnTransform);
@@ -46,19 +52,21 @@ public class PlayerSpawnSystem : NetworkBehaviour
         }
         
     }
-
+    //spawns a player when the game begins
     public override void OnStartServer()
     {
         NetworkManagerLobby.onServerReadied += SpawnPlayer;
     }
 
     [ServerCallback]
+    //despawns a player when the game ends
     private void OnDestroy()
     {
         NetworkManagerLobby.onServerReadied -= SpawnPlayer;
     }
 
     [Server]
+    //respawns the player at a spawnpoint based on team id
     public void RespawnPlayer(GameObject self)
     {
 
@@ -111,6 +119,7 @@ public class PlayerSpawnSystem : NetworkBehaviour
 
 
     }
+    //spawns a player at the start of the game
     public void SpawnPlayer(NetworkConnection conn)
     {
 
