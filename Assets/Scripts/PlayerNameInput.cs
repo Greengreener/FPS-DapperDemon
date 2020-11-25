@@ -6,6 +6,9 @@ using TMPro;
 
 public class PlayerNameInput : MonoBehaviour
 {
+    /// <summary>
+    /// script to change and utilise the player name
+    /// </summary>
     //Creates a input field called name input field
     [Header("UI")]
     [SerializeField] private TMP_InputField nameInputField = null;

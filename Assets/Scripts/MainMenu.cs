@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
+    /// <summary>
+    /// this controls your the main menu in the lobby and lets you host
+    /// </summary>
     //desiginates the network manager lobby
     [SerializeField] private NetworkManagerLobby networkManager = null;
 

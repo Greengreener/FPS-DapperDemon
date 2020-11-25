@@ -7,6 +7,9 @@ using UnityEngine.Audio;
 
 public class Setting : MonoBehaviour
 {
+    /// <summary>
+    /// this script allows the host to customise the various settings for the game
+    /// </summary>
     // create a public static bool called SettingsOpen
     public static bool SettingsOpen;
     //allows you to set the sound right

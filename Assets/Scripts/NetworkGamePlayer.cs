@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class NetworkGamePlayer : NetworkBehaviour
 {
+    /// <summary>
+    /// this script give you a player to spawn
+    /// </summary>
     [SyncVar]
     //sets the default display name
     private string displayName = "Loading...";

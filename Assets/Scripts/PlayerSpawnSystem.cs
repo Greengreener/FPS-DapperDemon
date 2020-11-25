@@ -7,6 +7,9 @@ using UnityEngine;
 
 public class PlayerSpawnSystem : NetworkBehaviour
 {
+    /// <summary>
+    /// script to collect the spawn points into two groups and spawns/respawn the player there
+    /// </summary>
     //adds an array for the player prefabs
     [SerializeField] private GameObject[] playerPrefab = null;
     //allows you to desiginate number of teams

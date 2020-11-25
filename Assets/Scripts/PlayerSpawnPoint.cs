@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class PlayerSpawnPoint : MonoBehaviour
 {
+    /// <summary>
+    /// this script makes the spawn point connect to spawn system
+    /// </summary>
     //bool shwoing what team you are on
     public bool TeamID;
     private void Awake()

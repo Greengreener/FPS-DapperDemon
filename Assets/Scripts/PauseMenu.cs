@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    /// <summary>
+    /// Allows you to pause the game and quit the game
+    /// </summary>
     //create a static bool called isPaused
     public static bool isPaused = false;
     //create a gameObject called _pauseMenu
@@ -20,6 +24,10 @@ public class PauseMenu : MonoBehaviour
         {
             TogglePause();
         }
+    }
+    private void ExitGame()
+    {
+        Application.Quit();
     }
     //create a function called TogglePause
     public void TogglePause()

@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class Movement : NetworkBehaviour
 {
+    /// <summary>
+    /// this scripts lets you move the player around
+    /// </summary>
     [Header("Speed Vars")]
     //value Variables
     //set how fawst you can move and rotate

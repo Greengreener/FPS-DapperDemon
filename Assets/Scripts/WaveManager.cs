@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
-    // scripts that moves objects up and down at a fixed rate that resemblies waves.
+    /// <summary>
+    /// scripts that moves objects up and down at a fixed rate that resemblies waves.
+    /// </summary>
+    
     public static WaveManager instance;
 
     public float amplitude = 1f;

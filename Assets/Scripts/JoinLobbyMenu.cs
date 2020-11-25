@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class JoinLobbyMenu : MonoBehaviour
 {
+    /// <summary>
+    /// this allows you to join a server
+    /// </summary>
     //access the Network manager lobby
     [SerializeField] private NetworkManagerLobby networkManager = null;
 

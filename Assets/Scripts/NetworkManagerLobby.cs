@@ -10,6 +10,9 @@ using UnityEngine.UI;
 
 public class NetworkManagerLobby : NetworkManager
 {
+    /// <summary>
+    /// the master script that almost every network script connects to
+    /// </summary>
     //sets the minimum amount of players nessary to play the game
     [SerializeField] private int minPlayers = 2;
     //makes the menuscene string empty

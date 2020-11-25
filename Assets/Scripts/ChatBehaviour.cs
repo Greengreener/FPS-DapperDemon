@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class ChatBehaviour : NetworkBehaviour
 {
+    /// <summary>
+    /// this script allows you to chat to various people
+    /// </summary>
     //creates a chatUI
     [SerializeField] private GameObject chatUI = null;
     //creates a Text called chat text

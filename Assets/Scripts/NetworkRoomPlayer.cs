@@ -10,6 +10,9 @@ using System.Net;
 
     public class NetworkRoomPlayer : NetworkBehaviour
     {
+    /// <summary>
+    /// this scripts shows you all of the individual players in the room and shows their states
+    /// </summary>
         [Header("UI")]
         //designates a lobbyUI
         [SerializeField] private GameObject lobbyUI = null;
