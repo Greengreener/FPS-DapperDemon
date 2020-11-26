@@ -558,6 +558,36 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2729338237980668041, guid: 8c838ec1ee3582d49a1f8734c0cf4ee9,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100695705200088864, guid: 8c838ec1ee3582d49a1f8734c0cf4ee9,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3154216636514453041, guid: 8c838ec1ee3582d49a1f8734c0cf4ee9,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622894310131064422, guid: 8c838ec1ee3582d49a1f8734c0cf4ee9,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789069211252320038, guid: 8c838ec1ee3582d49a1f8734c0cf4ee9,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696879507074536025, guid: 8c838ec1ee3582d49a1f8734c0cf4ee9,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9037769181962646341, guid: 8c838ec1ee3582d49a1f8734c0cf4ee9,
         type: 3}
       propertyPath: networkManager

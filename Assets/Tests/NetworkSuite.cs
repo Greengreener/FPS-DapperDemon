@@ -14,7 +14,7 @@ public class NetworkSuite
         movement = movementGameObject.GetComponent<Movement>();
 
     }
-
+    /*/
     [UnityTest]
     public IEnumerator AstroidMoveDown()
     {
@@ -50,4 +50,5 @@ public class NetworkSuite
         Assert.False(movement.isGameOver);
         yield return null;
     }
+    /*/
 }
