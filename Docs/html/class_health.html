@@ -26,9 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">FPSAssignmentDapperDemon
-   &#160;<span id="projectnumber">0.-1</span>
    </div>
-   <div id="projectbrief">FPS 4 tafe</div>
   </td>
  </tr>
  </tbody>
@@ -86,7 +84,6 @@ $(document).ready(function(){initNavTree('class_health.html',''); initResizable(
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#properties">Properties</a> &#124;
 <a href="class_health-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Health Class Reference</div>  </div>
@@ -101,6 +98,8 @@ Inheritance diagram for Health:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ae3d1bcc90e39f53e205f592e49c96ab5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health.html#ae3d1bcc90e39f53e205f592e49c96ab5">Respawn</a> ()</td></tr>
+<tr class="separator:ae3d1bcc90e39f53e205f592e49c96ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8b1385108192da71d9054e80dd50eea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health.html#af8b1385108192da71d9054e80dd50eea">Heal</a> (float _intakeHeal)</td></tr>
 <tr class="separator:af8b1385108192da71d9054e80dd50eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a551239600145d219356787da2aa09949"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health.html#a551239600145d219356787da2aa09949">Damage</a> (float _intakeDamage)</td></tr>
@@ -112,11 +111,14 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a65656088f4e9276ce02126d1452b4bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb79e47ffc363eb4883bac1a91a8c964"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health.html#adb79e47ffc363eb4883bac1a91a8c964">teamTag</a></td></tr>
 <tr class="separator:adb79e47ffc363eb4883bac1a91a8c964"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
-Properties</h2></td></tr>
-<tr class="memitem:af3c61664cf2b98dc65ce2fe2baa42d42"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health.html#af3c61664cf2b98dc65ce2fe2baa42d42">HealthCurrent</a><code> [get, set]</code></td></tr>
-<tr class="separator:af3c61664cf2b98dc65ce2fe2baa42d42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afab0be89132927d5cb1bf6e2aa665675"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health.html#afab0be89132927d5cb1bf6e2aa665675">firstTeam</a></td></tr>
+<tr class="separator:afab0be89132927d5cb1bf6e2aa665675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56cecbcc5159755625f018be248d56a9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health.html#a56cecbcc5159755625f018be248d56a9">respawnTime</a></td></tr>
+<tr class="separator:a56cecbcc5159755625f018be248d56a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f16a4595336c12d4f9d0da05a3856f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player_spawn_system.html">PlayerSpawnSystem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health.html#a1f16a4595336c12d4f9d0da05a3856f9">spawn</a></td></tr>
+<tr class="separator:a1f16a4595336c12d4f9d0da05a3856f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0c408a98c8d814a0cd16b5c4297bf29"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_health.html#aa0c408a98c8d814a0cd16b5c4297bf29">self</a></td></tr>
+<tr class="separator:aa0c408a98c8d814a0cd16b5c4297bf29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a551239600145d219356787da2aa09949"></a>
@@ -155,7 +157,38 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a id="ae3d1bcc90e39f53e205f592e49c96ab5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3d1bcc90e39f53e205f592e49c96ab5">&#9670;&nbsp;</a></span>Respawn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Health.Respawn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="afab0be89132927d5cb1bf6e2aa665675"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afab0be89132927d5cb1bf6e2aa665675">&#9670;&nbsp;</a></span>firstTeam</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Health.firstTeam</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a65656088f4e9276ce02126d1452b4bb2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a65656088f4e9276ce02126d1452b4bb2">&#9670;&nbsp;</a></span>healthTotal</h2>
 
@@ -164,6 +197,48 @@ Properties</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">float Health.healthTotal</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56cecbcc5159755625f018be248d56a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56cecbcc5159755625f018be248d56a9">&#9670;&nbsp;</a></span>respawnTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Health.respawnTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0c408a98c8d814a0cd16b5c4297bf29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0c408a98c8d814a0cd16b5c4297bf29">&#9670;&nbsp;</a></span>self</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject Health.self</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f16a4595336c12d4f9d0da05a3856f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f16a4595336c12d4f9d0da05a3856f9">&#9670;&nbsp;</a></span>spawn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_player_spawn_system.html">PlayerSpawnSystem</a> Health.spawn</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -184,31 +259,8 @@ Properties</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Property Documentation</h2>
-<a id="af3c61664cf2b98dc65ce2fe2baa42d42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3c61664cf2b98dc65ce2fe2baa42d42">&#9670;&nbsp;</a></span>HealthCurrent</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Health.HealthCurrent</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/oscar.pugh1/Documents/GitHub/FPSAssignment/Assets/Scripts/Oscar'sScripts/<a class="el" href="_health_8cs.html">Health.cs</a></li>
+<li>C:/Users/mitchell.curnoe1/Documents/GitHub/FPS-DapperDemon/Assets/Scripts/Oscar'sScripts/Player/<a class="el" href="_health_8cs.html">Health.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -216,7 +268,7 @@ Properties</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_health.html">Health</a></li>
-    <li class="footer">Generated on Mon Nov 9 2020 12:12:34 for FPSAssignmentDapperDemon by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Nov 30 2020 14:42:32 for FPSAssignmentDapperDemon by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

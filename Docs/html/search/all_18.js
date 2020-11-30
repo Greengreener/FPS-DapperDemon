@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['zonehandler_1610',['ZoneHandler',['../class_mirror_1_1_examples_1_1_additive_1_1_zone_handler.html',1,'Mirror::Examples::Additive']]],
-  ['zonehandler_2ecs_1611',['ZoneHandler.cs',['../_zone_handler_8cs.html',1,'']]]
+  ['x_5faxis_6848',['X_AXIS',['../namespace_amplify_shader_editor.html#ae849b935a180d63ae5b0c790de32b8b2ad302f28c2a2af3ceddb7fe8e85fcbc73',1,'AmplifyShaderEditor']]],
+  ['xbox360_6849',['xbox360',['../namespace_amplify_shader_editor.html#acb422609f7a811b4d980b3bd82a19307ae803adae1f5acc155699ad43e9b77629',1,'AmplifyShaderEditor']]],
+  ['xboxone_6850',['xboxone',['../namespace_amplify_shader_editor.html#acb422609f7a811b4d980b3bd82a19307ac630e323919dbf209c0a18dd6a8cd092',1,'AmplifyShaderEditor']]]
 ];

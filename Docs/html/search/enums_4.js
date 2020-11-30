@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['operation_3217',['Operation',['../_sync_dictionary_8cs.html#a4482b80c62e1dafe8ca1e4c9ca35da9c',1,'Operation():&#160;SyncDictionary.cs'],['../_sync_list_8cs.html#a4482b80c62e1dafe8ca1e4c9ca35da9c',1,'Operation():&#160;SyncList.cs'],['../_sync_set_8cs.html#a4482b80c62e1dafe8ca1e4c9ca35da9c',1,'Operation():&#160;SyncSet.cs']]]
+  ['eresizeaxis_12639',['eResizeAxis',['../namespace_amplify_shader_editor.html#ae849b935a180d63ae5b0c790de32b8b2',1,'AmplifyShaderEditor']]],
+  ['evectorfrommatrixmode_12640',['eVectorFromMatrixMode',['../namespace_amplify_shader_editor.html#a3bb6b6c5151fc751b25899a4c03cf54d',1,'AmplifyShaderEditor']]],
+  ['eventtype_12641',['EventType',['../namespace_telepathy.html#acad533972cf6a864283d0352963495e0',1,'Telepathy']]]
 ];

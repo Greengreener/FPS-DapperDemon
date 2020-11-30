@@ -42,6 +42,10 @@ public class ChatBehaviour : NetworkBehaviour
         chatText.text += message;
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="message"></param>
     [Client]
     public void Send(string message)
     {

@@ -29,7 +29,11 @@ public class PauseMenu : MonoBehaviour
     {
         Application.Quit();
     }
-    //create a function called TogglePause
+
+    /// <summary>
+    /// create a function called TogglePause
+    /// </summary>
+
     public void TogglePause()
     {
         //if its paused

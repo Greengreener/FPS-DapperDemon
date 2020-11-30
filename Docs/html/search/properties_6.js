@@ -1,12 +1,21 @@
 var searchData=
 [
-  ['identity_3269',['identity',['../class_mirror_1_1_network_connection.html#a1d2489f176006bf19fd9bb9850967c76',1,'Mirror::NetworkConnection']]],
-  ['includeexceptionincloseresponse_3270',['IncludeExceptionInCloseResponse',['../class_ninja_1_1_web_sockets_1_1_web_socket_client_options.html#a71719da13cf5c87d5760ee68c64fd468',1,'Ninja.WebSockets.WebSocketClientOptions.IncludeExceptionInCloseResponse()'],['../class_ninja_1_1_web_sockets_1_1_web_socket_server_options.html#ab3f6848fae2c43874e3ef76314771b09',1,'Ninja.WebSockets.WebSocketServerOptions.IncludeExceptionInCloseResponse()']]],
-  ['isclient_3271',['isClient',['../class_mirror_1_1_network_identity.html#a0a3bb71dd8fc37492957fe1bdbb7955e',1,'Mirror::NetworkIdentity']]],
-  ['isconnected_3272',['IsConnected',['../class_mirror_1_1_websocket_1_1_client.html#a363efaa26b38d172effa9e38baca95c7',1,'Mirror::Websocket::Client']]],
-  ['isdirty_3273',['IsDirty',['../interface_mirror_1_1_sync_object.html#a3a49fc42159d03b5a2bca08ff1d578cd',1,'Mirror::SyncObject']]],
-  ['isleader_3274',['IsLeader',['../class_network_room_player.html#a89d70fada2f0bd206c46802796db9761',1,'NetworkRoomPlayer']]],
-  ['isreadonly_3275',['IsReadOnly',['../class_mirror_1_1_sync_i_dictionary.html#a638820e10b3e96d44c76a2c1fc877dfa',1,'Mirror.SyncIDictionary.IsReadOnly()'],['../class_mirror_1_1_sync_list.html#afc5e36e5fdeb5644392b409727cbebb4',1,'Mirror.SyncList.IsReadOnly()'],['../class_mirror_1_1_sync_set.html#a0f7d98a30b58def0dc3ee60887b1e622',1,'Mirror.SyncSet.IsReadOnly()']]],
-  ['isserver_3276',['isServer',['../class_mirror_1_1_network_identity.html#a45b20df7d45211189befe124e3836f3c',1,'Mirror::NetworkIdentity']]],
-  ['iswebsocketrequest_3277',['IsWebSocketRequest',['../class_ninja_1_1_web_sockets_1_1_web_socket_http_context.html#a47fe358e2323d32e938107b8e668c13a',1,'Ninja::WebSockets::WebSocketHttpContext']]]
+  ['gameplayers_13687',['GamePlayers',['../class_network_manager_lobby.html#adc9ec65a897f6c8de267da9cd5378ab6',1,'NetworkManagerLobby']]],
+  ['gentype_13688',['GenType',['../class_amplify_shader_editor_1_1_master_node_data_collector.html#ad5a582e2d83901ea96ed9025988f5d84',1,'AmplifyShaderEditor.MasterNodeDataCollector.GenType()'],['../class_amplify_shader_editor_1_1_input_port.html#ada956058af550d670b7d3241b102bfb5',1,'AmplifyShaderEditor.InputPort.GenType()']]],
+  ['getcurrenttessellationfunction_13689',['GetCurrentTessellationFunction',['../class_amplify_shader_editor_1_1_tessellation_op_helper.html#a83689bafdd9725b01efd9099ccc98ead',1,'AmplifyShaderEditor::TessellationOpHelper']]],
+  ['globalarraynodes_13690',['GlobalArrayNodes',['../class_amplify_shader_editor_1_1_parent_graph.html#a321cfff7f618686dea3cb61e125daacc',1,'AmplifyShaderEditor::ParentGraph']]],
+  ['globalposition_13691',['GlobalPosition',['../class_amplify_shader_editor_1_1_parent_node.html#aafc289367738237c88f876d82068cfb1',1,'AmplifyShaderEditor::ParentNode']]],
+  ['globalpreview_13692',['GlobalPreview',['../class_amplify_shader_editor_1_1_amplify_shader_editor_window.html#a2354a6b149b512efa0c160e29c38114b',1,'AmplifyShaderEditor::AmplifyShaderEditorWindow']]],
+  ['globalshadermodel_13693',['GlobalShaderModel',['../class_amplify_shader_editor_1_1_template_multi_pass.html#a23b3bd080115836a128c9fcd14c1d541',1,'AmplifyShaderEditor::TemplateMultiPass']]],
+  ['globalshowinternaldata_13694',['GlobalShowInternalData',['../class_amplify_shader_editor_1_1_amplify_shader_editor_window.html#a832be7fc741c1ae2fada218b9a343bf8',1,'AmplifyShaderEditor::AmplifyShaderEditorWindow']]],
+  ['globalstag_13695',['GlobalsTag',['../class_amplify_shader_editor_1_1_template_modules_data.html#a148be3505a1e99b52586662a1cc25b82',1,'AmplifyShaderEditor::TemplateModulesData']]],
+  ['grabpass_13696',['GrabPass',['../class_amplify_shader_editor_1_1_master_node_data_collector.html#a81a5702506bb6c342f22fc9d5ddfa72a',1,'AmplifyShaderEditor::MasterNodeDataCollector']]],
+  ['grabpassdict_13697',['GrabPassDict',['../class_amplify_shader_editor_1_1_master_node_data_collector.html#a81d5a574f50bb65e2708b8c33e4dee80',1,'AmplifyShaderEditor::MasterNodeDataCollector']]],
+  ['grabpasses_13698',['GrabPasses',['../class_amplify_shader_editor_1_1_outline_op_helper.html#ab71ced6fca725453f9701c2a8a4d62c6',1,'AmplifyShaderEditor::OutlineOpHelper']]],
+  ['grabpasslist_13699',['GrabPassList',['../class_amplify_shader_editor_1_1_master_node_data_collector.html#a3be3aef6ea0196b6d2a0ed92316bc70f',1,'AmplifyShaderEditor::MasterNodeDataCollector']]],
+  ['gradient_13700',['Gradient',['../class_amplify_shader_editor_1_1_gradient_node.html#a1c8d672d4a916eff5854502953613300',1,'AmplifyShaderEditor::GradientNode']]],
+  ['graphcount_13701',['GraphCount',['../class_amplify_shader_editor_1_1_amplify_shader_editor_window.html#a73fffd8ce26abf0e8c4bef32b51ccf5d',1,'AmplifyShaderEditor::AmplifyShaderEditorWindow']]],
+  ['graphdepth_13702',['GraphDepth',['../class_amplify_shader_editor_1_1_parent_node.html#ad1da31df2ebfbb2ea46764acfbf624f9',1,'AmplifyShaderEditor::ParentNode']]],
+  ['graphid_13703',['GraphId',['../class_amplify_shader_editor_1_1_parent_graph.html#ab9bfdc0c699f9d83663ab8f03f7eca78',1,'AmplifyShaderEditor::ParentGraph']]],
+  ['guid_13704',['GUID',['../class_amplify_shader_editor_1_1_amplify_shader_editor_window.html#a1730e48f1775c6e26dad1fec1bf1da87',1,'AmplifyShaderEditor.AmplifyShaderEditorWindow.GUID()'],['../class_amplify_shader_editor_1_1_template_data_parent.html#ad5e650967a43e6cb75e39a8ae2933faa',1,'AmplifyShaderEditor.TemplateDataParent.GUID()']]]
 ];

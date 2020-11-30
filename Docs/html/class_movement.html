@@ -26,9 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">FPSAssignmentDapperDemon
-   &#160;<span id="projectnumber">0.-1</span>
    </div>
-   <div id="projectbrief">FPS 4 tafe</div>
   </td>
  </tr>
  </tbody>
@@ -103,6 +101,7 @@ Inheritance diagram for Movement:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ae494a1873375fb7e9ab99d0fb5fd3503"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#ae494a1873375fb7e9ab99d0fb5fd3503">moveSpeed</a></td></tr>
+<tr class="memdesc:ae494a1873375fb7e9ab99d0fb5fd3503"><td class="mdescLeft">&#160;</td><td class="mdescRight">this scripts lets you move the player around  <a href="class_movement.html#ae494a1873375fb7e9ab99d0fb5fd3503">More...</a><br /></td></tr>
 <tr class="separator:ae494a1873375fb7e9ab99d0fb5fd3503"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cfd409943efdff4050013dab8b1a6ce"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#a1cfd409943efdff4050013dab8b1a6ce">walkSpeed</a></td></tr>
 <tr class="separator:a1cfd409943efdff4050013dab8b1a6ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -112,6 +111,10 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a60e64b688eda067a85f0c481b34d4e1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac639017ca582e996b15ce51fd6ed8d9a"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#ac639017ca582e996b15ce51fd6ed8d9a">self</a></td></tr>
 <tr class="separator:ac639017ca582e996b15ce51fd6ed8d9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef76c285aaad061cc157b18f6e3eb57e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_health.html">Health</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#aef76c285aaad061cc157b18f6e3eb57e">playerHealth</a></td></tr>
+<tr class="separator:aef76c285aaad061cc157b18f6e3eb57e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab400385b468435688463a75abfed9384"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_movement.html#ab400385b468435688463a75abfed9384">fallDamage</a> = 1</td></tr>
+<tr class="separator:ab400385b468435688463a75abfed9384"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_mirror_1_1_network_behaviour"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_mirror_1_1_network_behaviour')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_mirror_1_1_network_behaviour.html">Mirror.NetworkBehaviour</a></td></tr>
 <tr class="memitem:acf0616ac2f967bdd47bf0f579cefe8a7 inherit pub_attribs_class_mirror_1_1_network_behaviour"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_mirror.html#ac9acfe9461893a0d1ebc0eef63d1a6ff">SyncMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mirror_1_1_network_behaviour.html#acf0616ac2f967bdd47bf0f579cefe8a7">syncMode</a> = SyncMode.Observers</td></tr>
 <tr class="memdesc:acf0616ac2f967bdd47bf0f579cefe8a7 inherit pub_attribs_class_mirror_1_1_network_behaviour"><td class="mdescLeft">&#160;</td><td class="mdescRight">sync mode for OnSerialize  <a href="class_mirror_1_1_network_behaviour.html#acf0616ac2f967bdd47bf0f579cefe8a7">More...</a><br /></td></tr>
@@ -265,6 +268,20 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ab400385b468435688463a75abfed9384"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab400385b468435688463a75abfed9384">&#9670;&nbsp;</a></span>fallDamage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Movement.fallDamage = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a96a46293fde6a4706f94c075db2c52c8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a96a46293fde6a4706f94c075db2c52c8">&#9670;&nbsp;</a></span>gravity</h2>
 
@@ -287,6 +304,22 @@ Additional Inherited Members</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">float Movement.moveSpeed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>this scripts lets you move the player around </p>
+
+</div>
+</div>
+<a id="aef76c285aaad061cc157b18f6e3eb57e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef76c285aaad061cc157b18f6e3eb57e">&#9670;&nbsp;</a></span>playerHealth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_health.html">Health</a> Movement.playerHealth</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -322,7 +355,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/oscar.pugh1/Documents/GitHub/FPSAssignment/Assets/Scripts/<a class="el" href="_movement_8cs.html">Movement.cs</a></li>
+<li>C:/Users/mitchell.curnoe1/Documents/GitHub/FPS-DapperDemon/Assets/Scripts/<a class="el" href="_movement_8cs.html">Movement.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -330,7 +363,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_movement.html">Movement</a></li>
-    <li class="footer">Generated on Mon Nov 9 2020 12:12:34 for FPSAssignmentDapperDemon by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Nov 30 2020 14:42:32 for FPSAssignmentDapperDemon by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

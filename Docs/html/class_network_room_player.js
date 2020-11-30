@@ -10,6 +10,7 @@ var class_network_room_player =
     [ "OnStopClient", "class_network_room_player.html#ab6cd46dabeed0d933ab8b49fab320877", null ],
     [ "DisplayName", "class_network_room_player.html#a5e37be71ec1451f9484ab2920cf4de8b", null ],
     [ "IsReady", "class_network_room_player.html#a585bec84846e4c124dda78491633d4bf", null ],
+    [ "self", "class_network_room_player.html#a3a86c314264dfede935686dcf7c6dc5a", null ],
     [ "IsLeader", "class_network_room_player.html#a89d70fada2f0bd206c46802796db9761", null ],
     [ "Room", "class_network_room_player.html#a868889e14a285eaed43f43492ad60551", null ]
 ];

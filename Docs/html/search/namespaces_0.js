@@ -1,25 +1,4 @@
 var searchData=
 [
-  ['additive_1902',['Additive',['../namespace_mirror_1_1_examples_1_1_additive.html',1,'Mirror::Examples']]],
-  ['authenticators_1903',['Authenticators',['../namespace_mirror_1_1_authenticators.html',1,'Mirror']]],
-  ['basic_1904',['Basic',['../namespace_mirror_1_1_examples_1_1_basic.html',1,'Mirror::Examples']]],
-  ['chat_1905',['Chat',['../namespace_mirror_1_1_examples_1_1_chat.html',1,'Mirror::Examples']]],
-  ['cloud_1906',['Cloud',['../namespace_mirror_1_1_cloud.html',1,'Mirror']]],
-  ['discovery_1907',['Discovery',['../namespace_mirror_1_1_discovery.html',1,'Mirror']]],
-  ['editorscripts_1908',['EditorScripts',['../namespace_mirror_1_1_editor_scripts.html',1,'Mirror']]],
-  ['example_1909',['Example',['../namespace_mirror_1_1_cloud_1_1_example.html',1,'Mirror::Cloud']]],
-  ['examples_1910',['Examples',['../namespace_mirror_1_1_cloud_1_1_examples.html',1,'Mirror.Cloud.Examples'],['../namespace_mirror_1_1_examples.html',1,'Mirror.Examples']]],
-  ['experimental_1911',['Experimental',['../namespace_mirror_1_1_experimental.html',1,'Mirror']]],
-  ['listserverservice_1912',['ListServerService',['../namespace_mirror_1_1_cloud_1_1_list_server_service.html',1,'Mirror::Cloud']]],
-  ['logging_1913',['Logging',['../namespace_mirror_1_1_editor_scripts_1_1_logging.html',1,'Mirror.EditorScripts.Logging'],['../namespace_mirror_1_1_logging.html',1,'Mirror.Logging']]],
-  ['mirror_1914',['Mirror',['../namespace_mirror.html',1,'']]],
-  ['multipleadditivescenes_1915',['MultipleAdditiveScenes',['../namespace_mirror_1_1_examples_1_1_multiple_additive_scenes.html',1,'Mirror::Examples']]],
-  ['networkroom_1916',['NetworkRoom',['../namespace_mirror_1_1_examples_1_1_network_room.html',1,'Mirror::Examples']]],
-  ['onek_1917',['OneK',['../namespace_mirror_1_1_examples_1_1_one_k.html',1,'Mirror::Examples']]],
-  ['pong_1918',['Pong',['../namespace_mirror_1_1_cloud_1_1_examples_1_1_pong.html',1,'Mirror.Cloud.Examples.Pong'],['../namespace_mirror_1_1_examples_1_1_pong.html',1,'Mirror.Examples.Pong']]],
-  ['remotecalls_1919',['RemoteCalls',['../namespace_mirror_1_1_remote_calls.html',1,'Mirror']]],
-  ['rigidbodyphysics_1920',['RigidbodyPhysics',['../namespace_mirror_1_1_examples_1_1_rigidbody_physics.html',1,'Mirror::Examples']]],
-  ['tanks_1921',['Tanks',['../namespace_mirror_1_1_examples_1_1_tanks.html',1,'Mirror::Examples']]],
-  ['weaver_1922',['Weaver',['../namespace_mirror_1_1_weaver.html',1,'Mirror']]],
-  ['websocket_1923',['Websocket',['../namespace_mirror_1_1_websocket.html',1,'Mirror']]]
+  ['amplifyshadereditor_7771',['AmplifyShaderEditor',['../namespace_amplify_shader_editor.html',1,'']]]
 ];

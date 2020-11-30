@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['playerspawnmethod_3218',['PlayerSpawnMethod',['../namespace_mirror.html#a23132665b6a9f18117f09ce19aec9609',1,'Mirror']]]
+  ['functionnodecategories_12642',['FunctionNodeCategories',['../namespace_amplify_shader_editor.html#a30516ba9a00dc342b4d4aee2deb416f2',1,'AmplifyShaderEditor']]]
 ];
