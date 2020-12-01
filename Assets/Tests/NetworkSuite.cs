@@ -10,45 +10,55 @@ public class NetworkSuite
     [SetUp]
     public void Setup()
     {
-        GameObject movementGameObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Movement"));
+        GameObject movementGameObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Player1"));
         movement = movementGameObject.GetComponent<Movement>();
 
     }
-    /*/
-    [UnityTest]
-    public IEnumerator AstroidMoveDown()
-    {
-        GameObject asteroid = movement.GetSpawner().SpawnAsteroid();
-        float initialYPos = asteroid.transform.position.y;
-
-        yield return new WaitForSeconds(0.1f);
-
-        Assert.Less(asteroid.transform.position.y, initialYPos);
-    }
 
     [TearDown]
-    public void TearDown()
+    public void Teardown()
     {
         Object.Destroy(movement.gameObject);
     }
+    //test one, can you change movedir
+    //test two, does move dir alter the position of the player
+    //test three, does jump add force to character controller
+
+    
     [UnityTest]
-    public IEnumerator GameOverOccursOnAsteroidCollision()
+    public IEnumerator ChangeMove()
     {
-        GameObject asteroid = movement.GetSpawner().SpawnAsteroid();
-        asteroid.transform.position = movement.GetShip().transform.position;
+        movement.gameObject.SetActive(true);
+        Vector3 originalMoveDir = movement._moveDir;
+        movement._moveDir -= movement.transform.right;
 
-        yield return new WaitForSeconds(0.1f);
-        Assert.True(movement.isGameOver);
-    }
-    [UnityTest]
-    public IEnumerator NewGameRestartsGame()
-    {
-        movement.isGameOver = true;
-        movement.NewGame();
+        Assert.True(originalMoveDir != movement._moveDir);
 
-
-        Assert.False(movement.isGameOver);
         yield return null;
     }
-    /*/
+    [UnityTest]
+    public IEnumerator ChangePos()
+    {
+        movement.gameObject.SetActive(true);
+        Vector3 originalPos = movement.transform.position;
+        movement._moveDir -= movement.transform.right;
+        movement.Move();
+
+        yield return new WaitForSeconds(0.1f);
+
+        Assert.True(originalPos != movement.transform.position);
+
+    }
+    [UnityTest]
+    public IEnumerator JumpUp()
+    {
+        movement.gameObject.SetActive(true);
+        Vector3 originalPos = movement.transform.position;
+        movement.Jump();
+
+        yield return new WaitForSeconds(0.1f);
+
+        Assert.True(originalPos.y != movement.transform.position.y);
+    }
+
 }

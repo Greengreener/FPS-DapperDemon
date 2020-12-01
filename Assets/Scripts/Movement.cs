@@ -17,7 +17,8 @@ public class Movement : NetworkBehaviour
     public float gravity, jumpForce;
     //Struct - Contains Multiple Variables (eg...3 floats)
     //controls where your character goes
-    private Vector3 _moveDir;
+    [HideInInspector]
+    public Vector3 _moveDir;
     //Reference Variable
     [SerializeField]
     //bool that lets you move without going to lobby
@@ -49,8 +50,11 @@ public class Movement : NetworkBehaviour
         }
 
     }
-
-    private void Move()
+    public void Jump()
+    {
+        _charC.Move(new Vector3(0, jumpForce, 0));
+    }
+  public void Move()
     {
         //set speed
         //makes you run when you move
@@ -73,7 +77,7 @@ public class Movement : NetworkBehaviour
         //the player jumps when you press j
         if (Input.GetKeyDown("j") && _charC.isGrounded == true)
         {
-            _charC.Move(new Vector3(0, jumpForce, 0));
+            Jump();
         }
 
         else
