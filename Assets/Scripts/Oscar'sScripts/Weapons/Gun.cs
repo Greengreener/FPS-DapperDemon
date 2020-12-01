@@ -50,7 +50,8 @@ public class Gun : MonoBehaviour
                 if (target != null && target.teamTag != player.teamTag)
                 {
                     //print("Target found ");
-                    target.Damage(Damage);
+                    // target.Damage(Damage);
+                    player.GetComponent<PlayerCommands>().Damage(Damage, target.GetComponent<PlayerCommands>());
                 }
             }
             ammoClipCurrent--;

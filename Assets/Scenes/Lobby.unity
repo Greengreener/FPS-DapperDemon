@@ -553,6 +553,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1549089248007531895, guid: 8c838ec1ee3582d49a1f8734c0cf4ee9,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1549089248130290933, guid: 8c838ec1ee3582d49a1f8734c0cf4ee9,
         type: 3}
       propertyPath: m_IsActive
@@ -582,6 +587,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285499458312442038, guid: 8c838ec1ee3582d49a1f8734c0cf4ee9,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8696879507074536025, guid: 8c838ec1ee3582d49a1f8734c0cf4ee9,
         type: 3}
