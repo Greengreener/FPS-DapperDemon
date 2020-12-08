@@ -42,6 +42,7 @@ public class Movement : NetworkBehaviour
 
     private void Update()
     {
+        /*/
         if (!hasAuthority)
         {
             return;
@@ -49,9 +50,11 @@ public class Movement : NetworkBehaviour
         //allows you to control player under certain conditions
         else
         {
-            //moves the player
-            Move();
-        }
+           /*/ 
+                //moves the player
+                Move();
+            
+        //}
         
 
     }
@@ -127,6 +130,7 @@ public class Movement : NetworkBehaviour
         //self.transform.rotation = Quaternion.LookRotation(newDirection);
         // player moves in the direction of the move direction
         _charC.Move(_moveDir * Time.deltaTime);
+        self.transform.Translate(_moveDir * Time.deltaTime);
 
     }
 }
