@@ -42,7 +42,7 @@ public class NetworkSuite
         movement.gameObject.SetActive(true);
         Vector3 originalPos = movement.transform.position;
         movement._moveDir -= movement.transform.right;
-        movement.Move();
+        //movement.Move();
 
         yield return new WaitForSeconds(0.1f);
 

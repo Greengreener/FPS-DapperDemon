@@ -42,12 +42,17 @@ public class Movement : NetworkBehaviour
 
     private void Update()
     {
+        if (!hasAuthority)
+        {
+            return;
+        }
         //allows you to control player under certain conditions
-        if (hasAuthority || forceMovement)
+        else
         {
             //moves the player
             Move();
         }
+        
 
     }
     public void Jump()
